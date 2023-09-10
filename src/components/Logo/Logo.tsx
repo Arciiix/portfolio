@@ -4,11 +4,17 @@ import { AnimationProps, Transition, motion } from "framer-motion";
 interface LogoProps {
   withoutFill?: boolean;
   repeat?: boolean; // PLay the animation all the time
+  notSelectable?: boolean; // No effect on hover
 
   size?: number;
 }
 
-export default function Logo({ withoutFill, repeat, size = 150 }: LogoProps) {
+export default function Logo({
+  withoutFill,
+  repeat,
+  size = 150,
+  notSelectable,
+}: LogoProps) {
   const icon = {
     hidden: {
       pathLength: 0,
@@ -32,8 +38,8 @@ export default function Logo({ withoutFill, repeat, size = 150 }: LogoProps) {
     },
     pathLength: {
       duration: 2,
-      repeat: repeat ? Infinity : 1,
-      repeatType: "mirror",
+      repeat: repeat ? Infinity : 0,
+      repeatType: repeat ? "mirror" : undefined,
     },
     fill: {
       delay: 1.5,
@@ -52,7 +58,7 @@ export default function Logo({ withoutFill, repeat, size = 150 }: LogoProps) {
       animate="visible"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      whileHover="outlined"
+      whileHover={notSelectable ? "visible" : "outlined"}
     >
       <motion.path
         d="M17.7721 113H18.4782L18.7145 112.335L29.4998 81.9524H72.422L83.2073 112.335L83.4436 113H84.1497H98.0676H99.5001L99.0063 111.655L58.7515 2.02513L58.5109 1.36981H57.8128H44.109H43.4109L43.1703 2.02513L2.91547 111.655L2.42172 113H3.85419H17.7721ZM50.9609 21.4965L67.5315 68.1757H34.3903L50.9609 21.4965Z"
