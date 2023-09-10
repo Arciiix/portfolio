@@ -28,9 +28,9 @@ export default function Landing() {
         }}
       >
         <FancyBackground />
-        <div className="my-24 h-full flex items-center justify-around">
+        <div className="my-24 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-around">
           <div className="m-16 mt-0 flex flex-col gap-4">
-            <span className="text-[200px] font-extrabold">
+            <span className="text-[100px] lg:text-[200px] font-extrabold">
               I&apos;m{" "}
               <span
                 className="text-transparent bg-clip-text transition-all"
@@ -42,10 +42,14 @@ export default function Landing() {
               </span>
             </span>
             <div className="flex flex-col gap-4">
-              <span className="text-8xl font-bold">lorem ipsum</span>
-              <span className="text-4xl font">that fell in ❤️ with</span>
+              <span className="text-6xl lg:text-8xl font-bold">
+                lorem ipsum
+              </span>
+              <span className="text-2xl lg:text-4xl font">
+                that fell in ❤️ with
+              </span>
               <span
-                className="text-7xl font-bold"
+                className="text-5xl lg:text-7xl font-bold"
                 style={{
                   color: currentColor,
                 }}
