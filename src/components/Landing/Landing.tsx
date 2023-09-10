@@ -69,15 +69,16 @@ export default function Landing() {
                 thing
               </span>
             </div>
-            <button
-              className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase border-4 border-solid transition-all hover:-translate-y-2 hover:border-8 active:!text-white hover:!font-normal"
+            <a
+              className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase border-4 border-solid transition-all hover:-translate-y-2 hover:border-8 active:!text-white hover:!font-normal text-center flex items-center justify-center cursor-pointer"
               style={{
                 color: currentColor,
                 borderColor: currentColor,
               }}
+              href="#content-anchor"
             >
               learn more
-            </button>
+            </a>
           </motion.div>
           <motion.div
             initial={{ translateY: 200, opacity: 0 }}
