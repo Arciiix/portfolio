@@ -6,6 +6,7 @@ import FancyBackground from "../Animations/FancyBackground/FancyBackground";
 import AnimatedDeveloper from "../Animations/AnimatedDeveloper/AnimatedDeveloper";
 
 import styles from "./Landing.module.css";
+import { motion } from "framer-motion";
 
 export default function Landing() {
   const [currentColor, setCurrentColor] = useState("#1baace");
@@ -31,7 +32,12 @@ export default function Landing() {
       >
         <FancyBackground />
         <div className="my-24 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-around">
-          <div className="m-16 mt-0 flex flex-col gap-4 whitespace-pre">
+          <motion.div
+            className="m-16 mt-0 flex flex-col gap-4 whitespace-pre"
+            initial={{ translateY: -200, opacity: 0 }}
+            whileInView={{ translateY: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <span className="text-[100px] lg:text-[200px] font-extrabold flex flex-col">
               <span className="text-6xl">I&apos;m</span>
               <span
@@ -72,10 +78,14 @@ export default function Landing() {
             >
               learn more
             </button>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ translateY: 200, opacity: 0 }}
+            whileInView={{ translateY: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <AnimatedDeveloper />
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
