@@ -7,6 +7,7 @@ import { Inter, Splash } from "next/font/google";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
+import Header from "@/components/Header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,7 +44,14 @@ export default function RootLayout({
         <AnimatePresence initial={true} mode="wait">
           <motion.div key={(pathname ?? "") + isLoading}>
             <div className="z-10 w-full h-screen">
-              {isLoading ? <div></div> : children}
+              {isLoading ? (
+                <div></div>
+              ) : (
+                <div>
+                  <Header />
+                  {children}
+                </div>
+              )}
             </div>
 
             <motion.div

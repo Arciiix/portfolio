@@ -51,6 +51,7 @@ export default function Logo({
 
   return (
     <motion.svg
+      className={notSelectable ? "" : "cursor-pointer"}
       width={size}
       height={size}
       viewBox="0 0 134 115"

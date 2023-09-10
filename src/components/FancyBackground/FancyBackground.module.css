@@ -1,0 +1,40 @@
+.shape {
+  position: absolute;
+  animation: floating 5s infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+}
+.circle {
+  width: 39px;
+  height: 39px;
+  background-image: url("/imgs/circle.png");
+}
+.square {
+  width: 35px;
+  height: 35px;
+  background-image: url("/imgs/square.png");
+}
+.triangle {
+  width: 35px;
+  height: 35px;
+  background-image: url("/imgs/triangle.png");
+}
+.cross {
+  width: 35px;
+  height: 35px;
+  background-image: url("/imgs/cross.png");
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%) rotate(-55deg);
+  }
+  50% {
+    transform: translateY(300%) rotate(55deg);
+  }
+  100% {
+    transform: translateY(0%) rotate(-55deg);
+  }
+}
