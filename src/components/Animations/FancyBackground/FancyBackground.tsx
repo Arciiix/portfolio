@@ -255,7 +255,7 @@ export default function FancyBackground() {
         className={`${styles.shape} ${styles.square}`}
         style={{
           top: "11.54%",
-          left: "91.51%",
+          left: "71.51%",
           animationDelay: "-0.1s",
         }}
       ></span>

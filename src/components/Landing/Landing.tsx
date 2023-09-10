@@ -58,7 +58,7 @@ export default function Landing() {
               </span>
             </div>
             <button
-              className="m-3 w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase border-4 border-solid transition-all hover:-translate-y-2 hover:border-8 active:!text-white hover:!font-normal"
+              className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase border-4 border-solid transition-all hover:-translate-y-2 hover:border-8 active:!text-white hover:!font-normal"
               style={{
                 color: currentColor,
                 borderColor: currentColor,
