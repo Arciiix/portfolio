@@ -1,9 +1,9 @@
 "use client";
 
 import { adjustColor } from "@/utils/color";
-import { motion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
-import FancyBackground from "../FancyBackground/FancyBackground";
+import FancyBackground from "../Animations/FancyBackground/FancyBackground";
+import AnimatedDeveloper from "../Animations/AnimatedDeveloper/AnimatedDeveloper";
 
 export default function Landing() {
   const [currentColor, setCurrentColor] = useState("#1baace");
@@ -28,8 +28,8 @@ export default function Landing() {
         }}
       >
         <FancyBackground />
-        <div className="my-24 h-full">
-          <div className="m-16 flex flex-col gap-4">
+        <div className="my-24 h-full flex items-center justify-around">
+          <div className="m-16 mt-0 flex flex-col gap-4">
             <span className="text-[200px] font-extrabold">
               I&apos;m{" "}
               <span
@@ -62,6 +62,9 @@ export default function Landing() {
             >
               learn more
             </button>
+          </div>
+          <div>
+            <AnimatedDeveloper />
           </div>
         </div>
       </div>
