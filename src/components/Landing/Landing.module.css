@@ -1,0 +1,46 @@
+.letter::after {
+  position: relative;
+  display: inline-block;
+  color: white;
+  bottom: 0;
+  font-size: 24px;
+  text-shadow: 5px 5px 5px black;
+
+  overflow: hidden;
+}
+.letterA::after {
+  content: "mbitious";
+}
+.letterA:hover::after {
+  width: 4.5em;
+}
+
+.letterR::after {
+  content: "esilient";
+}
+.letterR:hover::after {
+  width: 4em;
+}
+.letterT::after {
+  content: "enacious";
+}
+.letterT:hover::after {
+  width: 4.5em;
+}
+.letterU::after {
+  content: "nique";
+}
+.letterU:hover::after {
+  width: 3em;
+}
+.letterR2::after {
+  content: "esourceful";
+}
+.letterR2:hover::after {
+  width: 5.5em;
+}
+
+.letter::after {
+  transition: all 0.5s;
+  width: 0px;
+}
