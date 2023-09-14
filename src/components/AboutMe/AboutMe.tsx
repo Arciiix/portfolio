@@ -1,10 +1,21 @@
 import Image from "next/image";
 import Divider from "../Divider/Divider";
 import Bolded from "../Text/BoldedText";
+import useCurrentView from "@/hooks/ui/useCurrentView";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function AboutMe() {
   return (
-    <div className="mt-20 w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col">
+    <motion.div
+      className="mt-20 w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col"
+      initial={{ translateY: -200, opacity: 0 }}
+      whileInView={{
+        translateY: 0,
+        opacity: 1,
+        transition: { duration: 0.8 },
+      }}
+    >
       <h1 className="text-teal-400 font-bold text-7xl text-center">About me</h1>
       <Divider />
       <div className="flex flex-col lg:flex-row items-center gap-6">
@@ -22,6 +33,9 @@ export default function AboutMe() {
             beatae eum odit nemo minima? Asperiores, quo error dicta deleniti
             cum aliquam quod?
           </span>
+          <div className="flex w-full items-start gap-4">
+            {/* TODO: Features */}
+          </div>
         </div>
         <Image
           src="/imgs/programming.svg"
@@ -30,6 +44,6 @@ export default function AboutMe() {
           height={240}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-export type CurrentView = "intro" | "other";
+export type CurrentView = "intro" | "aboutMe" | "other";
 
 const currentViewAtom = atom<CurrentView>({
   key: "currentView",

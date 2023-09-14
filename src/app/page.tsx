@@ -1,7 +1,5 @@
-import AboutMe from "@/components/AboutMe/AboutMe";
-import AnimatedTyping from "@/components/Animations/AnimatedTyping/AnimatedTyping";
-import FunFact from "@/components/FunFact/FunFact";
 import Landing from "@/components/Landing/Landing";
+import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
 
 export default function Home() {
   return (
@@ -9,8 +7,7 @@ export default function Home() {
       <Landing />
 
       <div id="content-anchor"></div>
-      <AboutMe />
-      <FunFact />
+      <PersonalInfo />
     </main>
   );
 }

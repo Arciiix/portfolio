@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useMemo } from "react";
 
 let FUN_FACTS = [
@@ -45,10 +46,18 @@ export default function FunFact() {
     );
   }, []);
   return (
-    <div className="flex flex-col items-center m-3">
+    <motion.div
+      className="flex flex-col items-center m-3 p-2"
+      initial={{ scale: 0.5, opacity: 0 }}
+      whileInView={{
+        scale: 1,
+        opacity: 1,
+        transition: { duration: 0.8, ease: "anticipate" },
+      }}
+    >
       {didYouKnowThat}
 
       <span>{randomFact}</span>
-    </div>
+    </motion.div>
   );
 }
