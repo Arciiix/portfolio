@@ -40,7 +40,7 @@ export default function Landing() {
     [currentFellInLoveIndex]
   );
 
-  const lighterColor = useMemo(() => {
+  const currentColorLight = useMemo(() => {
     return adjustColor(currentColor, 30);
   }, [currentColor]);
   const currentColorDark = useMemo(() => {
@@ -80,7 +80,7 @@ export default function Landing() {
               <span
                 className="text-transparent bg-clip-text transition-all cursor-pointer"
                 style={{
-                  backgroundImage: `linear-gradient(to right, ${currentColor}, ${lighterColor})`,
+                  backgroundImage: `linear-gradient(to right, ${currentColor}, ${currentColorLight})`,
                 }}
               >
                 <span className={`${styles.letter} ${styles.letterA}`}>A</span>
@@ -110,10 +110,10 @@ export default function Landing() {
               </span>
             </div>
             <a
-              className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase border-4 border-solid transition-all hover:-translate-y-2 hover:border-8 active:!text-white hover:!font-normal text-center flex items-center justify-center cursor-pointer"
+              className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase transition-all hover:-translate-y-2 text-center flex items-center justify-center cursor-pointer hover:border-4 hover:!bg-transparent hover:!text-white"
               style={{
-                color: currentColor,
-                borderColor: currentColor,
+                color: currentColorDark,
+                backgroundColor: currentColor,
               }}
               href="#content-anchor"
             >
