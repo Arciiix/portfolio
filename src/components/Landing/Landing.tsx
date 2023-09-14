@@ -1,5 +1,8 @@
 "use client";
 
+// TODO: Add the real roles
+const ROLES = ["TODO", "Person", "Human", "Developer"];
+
 import { adjustColor } from "@/utils/color";
 import { useEffect, useMemo, useState } from "react";
 import FancyBackground from "../Animations/FancyBackground/FancyBackground";
@@ -7,6 +10,7 @@ import AnimatedDeveloper from "../Animations/AnimatedDeveloper/AnimatedDeveloper
 
 import styles from "./Landing.module.css";
 import { motion } from "framer-motion";
+import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
 
 export default function Landing() {
   const [currentColor, setCurrentColor] = useState("#1baace");
@@ -54,9 +58,9 @@ export default function Landing() {
               </span>
             </span>
             <div className="flex flex-col gap-4">
-              <span className="text-6xl lg:text-8xl font-bold">
-                lorem ipsum
-              </span>
+              <div className="text-6xl lg:text-8xl font-bold">
+                <AnimatedTyping words={ROLES} cursorColor={currentColor} />
+              </div>
               <span className="text-2xl lg:text-4xl font">
                 that fell in ❤️ with
               </span>

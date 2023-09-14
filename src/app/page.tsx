@@ -1,3 +1,4 @@
+import AnimatedTyping from "@/components/Animations/AnimatedTyping/AnimatedTyping";
 import Landing from "@/components/Landing/Landing";
 
 export default function Home() {
