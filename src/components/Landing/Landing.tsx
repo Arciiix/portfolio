@@ -4,15 +4,19 @@
 const ROLES = ["TODO", "Person", "Human", "Developer"];
 
 import { adjustColor } from "@/utils/color";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import FancyBackground from "../Animations/FancyBackground/FancyBackground";
 import AnimatedDeveloper from "../Animations/AnimatedDeveloper/AnimatedDeveloper";
 
 import styles from "./Landing.module.css";
-import { motion } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
+import useCurrentView from "@/hooks/ui/useCurrentView";
 
 export default function Landing() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { currentView } = useCurrentView(containerRef, "intro");
+
   const [currentColor, setCurrentColor] = useState("#1baace");
   const lighterColor = useMemo(() => {
     return adjustColor(currentColor, 30);
@@ -26,9 +30,11 @@ export default function Landing() {
       setCurrentColor("#f7df06");
     }, 2000);
   }, []);
+
   return (
     <>
       <div
+        ref={(r) => (containerRef.current = r)}
         className="min-h-screen w-full bg-opacity-10 transition-all duration-500"
         style={{
           backgroundColor: currentColorDark,
