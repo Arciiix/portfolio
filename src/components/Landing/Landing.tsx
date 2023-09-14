@@ -3,6 +3,19 @@
 // TODO: Add the real roles
 const ROLES = ["TODO", "Person", "Human", "Developer"];
 
+// TODO: Add the real items
+const FELL_IN_LOVE_TEXTS: AnimatedText[] = [
+  {
+    text: "Thing",
+    color: "#1baace",
+  },
+  {
+    text: "Programming",
+    color: "#e3392d",
+  },
+  { text: "TypeScript", color: "#f7df06" },
+];
+
 import { adjustColor } from "@/utils/color";
 import { useEffect, useMemo, useRef, useState } from "react";
 import FancyBackground from "../Animations/FancyBackground/FancyBackground";
@@ -12,12 +25,21 @@ import styles from "./Landing.module.css";
 import { motion, useInView, useScroll } from "framer-motion";
 import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
 import useCurrentView from "@/hooks/ui/useCurrentView";
+import AnimatedTexts, {
+  AnimatedText,
+} from "../Animations/AnimatedTexts/AnimatedTexts";
 
 export default function Landing() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { currentView } = useCurrentView(containerRef, "intro");
 
-  const [currentColor, setCurrentColor] = useState("#1baace");
+  const [currentFellInLoveIndex, setCurrentFellInLoveIndex] = useState(0);
+
+  const currentColor = useMemo(
+    () => FELL_IN_LOVE_TEXTS[currentFellInLoveIndex].color,
+    [currentFellInLoveIndex]
+  );
+
   const lighterColor = useMemo(() => {
     return adjustColor(currentColor, 30);
   }, [currentColor]);
@@ -26,9 +48,14 @@ export default function Landing() {
   }, [currentColor]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setCurrentColor("#f7df06");
-    }, 2000);
+    const changeInterval = setInterval(
+      () =>
+        setCurrentFellInLoveIndex(
+          (index) => (index + 1) % FELL_IN_LOVE_TEXTS.length
+        ),
+      3000
+    );
+    return () => clearInterval(changeInterval);
   }, []);
 
   return (
@@ -76,7 +103,10 @@ export default function Landing() {
                   color: currentColor,
                 }}
               >
-                thing
+                <AnimatedTexts
+                  texts={FELL_IN_LOVE_TEXTS}
+                  currentIndex={currentFellInLoveIndex}
+                />
               </span>
             </div>
             <a
