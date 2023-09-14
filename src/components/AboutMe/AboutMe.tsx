@@ -4,7 +4,7 @@ import Bolded from "../Text/BoldedText";
 
 export default function AboutMe() {
   return (
-    <div className="my-20 w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col">
+    <div className="mt-20 w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col">
       <h1 className="text-teal-400 font-bold text-7xl text-center">About me</h1>
       <Divider />
       <div className="flex flex-col lg:flex-row items-center gap-6">
