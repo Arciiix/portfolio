@@ -1,65 +1,15 @@
-import { useMemo } from "react";
-import Divider from "../Divider/Divider";
-import Image from "next/image";
 import { motion } from "framer-motion";
-
-interface Skill {
-  name: string;
-  image: string;
-}
-const SKILLS: Skill[] = [
-  {
-    name: "TypeScript",
-    image: "/imgs/technologies/typescript.svg",
-  },
-  {
-    name: "JavaScript",
-    image: "/imgs/technologies/javascript.svg",
-  },
-  {
-    name: "React",
-    image: "/imgs/technologies/react.svg",
-  },
-  {
-    name: "CSS3",
-    image: "/imgs/technologies/css.svg",
-  },
-  {
-    name: "HTML5",
-    image: "/imgs/technologies/html.svg",
-  },
-  {
-    name: "Node.js",
-    image: "/imgs/technologies/nodejs.svg",
-  },
-  {
-    name: "Python",
-    image: "/imgs/technologies/python.svg",
-  },
-  {
-    name: "Flutter",
-    image: "/imgs/technologies/flutter.svg",
-  },
-  {
-    name: "Visual Studio Code",
-    image: "/imgs/technologies/vscode.svg",
-  },
-  {
-    name: "Linux",
-    image: "/imgs/technologies/linux.svg",
-  },
-  {
-    name: "Git",
-    image: "/imgs/technologies/git.svg",
-  },
-];
+import Image from "next/image";
+import { useMemo } from "react";
+import CodeSnippet from "../CodeSnippet/CodeSnippet";
+import { SKILLS } from "./SkillsDescriptions";
 
 export default function Skills() {
   const technologies = useMemo(() => {
     return SKILLS.map((e, index) => {
       return (
         <motion.div
-          className="group flex items-center flex-col m-2 gap-2 cursor-pointer"
+          className="group flex items-center flex-col m-2 gap-2 cursor-pointer relative"
           key={e.name}
           initial={{ translateY: -200, opacity: 0 }}
           whileInView={{
@@ -78,6 +28,9 @@ export default function Skills() {
           <span className="text-xl group-hover:text-teal-400 transition-all duration-500">
             {e.name}
           </span>
+          <div className="hidden transition-all group-hover:flex absolute top-0 left-0">
+            <CodeSnippet content={e.codeSnippetContent} />
+          </div>
         </motion.div>
       );
     });
@@ -107,7 +60,7 @@ export default function Skills() {
           {technologies}
         </div>
         <span className="text-teal-100">
-          Order means the importance of that technology in my set of skills.
+          Hover over the technology for brief description.
         </span>
       </div>
     </motion.div>
