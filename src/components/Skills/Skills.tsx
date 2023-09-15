@@ -49,7 +49,7 @@ export default function Skills() {
         Those Make Dreams Reality. ✨
       </span>
       <span className="text-7xl font-bold text-teal-400">
-        Skills, technologies
+        Skills & technologies
       </span>
       <div className="m-8">
         <span className="text-xl">
