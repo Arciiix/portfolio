@@ -1,5 +1,7 @@
+import Divider from "@/components/Divider/Divider";
 import Landing from "@/components/Landing/Landing";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
+import TechnologiesVideo from "@/components/TechnologiesVideo/TechnologiesVideo";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
 
       <div id="content-anchor"></div>
       <PersonalInfo />
+      <Divider />
+      <TechnologiesVideo />
     </main>
   );
 }
