@@ -60,7 +60,7 @@ export default function Skills() {
           {technologies}
         </div>
         <span className="text-teal-100">
-          Hover over the technology for brief description.
+          Hover over the technology for a brief description.
         </span>
       </div>
     </motion.div>
