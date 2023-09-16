@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Header from "@/components/Header/Header";
 import { RecoilRoot } from "recoil";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,6 +53,7 @@ export default function RootLayout({
                   <div>
                     <Header />
                     {children}
+                    <Footer />
                   </div>
                 )}
               </div>

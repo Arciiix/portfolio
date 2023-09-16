@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact/Contact";
 import Divider from "@/components/Divider/Divider";
+import Footer from "@/components/Footer/Footer";
 import Landing from "@/components/Landing/Landing";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
 import Projects from "@/components/Projects/Projects";
