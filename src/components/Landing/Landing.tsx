@@ -1,35 +1,65 @@
 "use client";
 
-// TODO: Add the real roles
-const ROLES = ["TODO", "Person", "Human", "Developer"];
+const ROLES = [
+  "Software engineer",
+  "Full-stack developer",
+  "IoT engineer",
+  "Hobbyist",
+];
 
-// TODO: Add the real items
 const FELL_IN_LOVE_TEXTS: AnimatedText[] = [
   {
-    text: "Thing",
-    color: "#1baace",
+    text: "TypeScript",
+    color: "#00A9F9",
+  },
+  {
+    text: "React",
+    color: "#2EE5E3",
+  },
+  {
+    text: "Web",
+    color: "#7A81DF",
+  },
+  {
+    text: "IoT",
+    color: "#A853A8",
+  },
+  {
+    text: "Cybersec",
+    color: "#96F7B1",
   },
   {
     text: "Programming",
-    color: "#e3392d",
+    color: "#ACC3FF",
   },
-  { text: "TypeScript", color: "#f7df06" },
+  {
+    text: "Coding",
+    color: "#85B5A4",
+  },
+  {
+    text: "Innovation",
+    color: "#2EE5E3",
+  },
+  {
+    text: "Automation",
+    color: "#E7FEFD",
+  },
 ];
 
 import { adjustColor } from "@/utils/color";
 import { useEffect, useMemo, useRef, useState } from "react";
-import FancyBackground from "../Animations/FancyBackground/FancyBackground";
 import AnimatedDeveloper from "../Animations/AnimatedDeveloper/AnimatedDeveloper";
+import FancyBackground from "../Animations/FancyBackground/FancyBackground";
 
-import styles from "./Landing.module.css";
-import { motion, useInView, useScroll } from "framer-motion";
-import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
 import useCurrentView from "@/hooks/ui/useCurrentView";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import AnimatedTexts, {
   AnimatedText,
 } from "../Animations/AnimatedTexts/AnimatedTexts";
-import Link from "next/link";
+import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
 import Socials from "../Socials/Socials";
+import styles from "./Landing.module.css";
 
 export default function Landing() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -92,8 +122,8 @@ export default function Landing() {
                 <span className={`${styles.letter} ${styles.letterR2}`}>r</span>
               </span>
             </span>
-            <div className="flex flex-col gap-4">
-              <div className="text-6xl lg:text-8xl font-bold">
+            <div className="flex flex-col gap-4 mb-6">
+              <div className="text-4xl lg:text-6xl font-bold">
                 <AnimatedTyping words={ROLES} cursorColor={currentColor} />
               </div>
               <span className="text-2xl lg:text-4xl font">

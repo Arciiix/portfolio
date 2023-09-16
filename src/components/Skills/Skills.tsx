@@ -52,9 +52,14 @@ export default function Skills() {
         Skills & technologies
       </span>
       <div className="m-8">
-        <span className="text-xl">
-          description of skills Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Quibusdam excepturi quo
+        <span className="text-xl p-3 m-3 max-w-5xl mb-5 block mx-auto">
+          Since my most beloved fields of programming are{" "}
+          <b>Full-Stack Development and IoT</b>, I use programming languages
+          designed for those purposes. Sometimes there are some smaller tools
+          that are necessary for creating an entire project, like{" "}
+          <b>mobile app framework</b> for creating the &quot;control
+          center&quot; of an IoT device. That&apos;s why my technologies are
+          diverse - and I think that&apos;s great!
         </span>
         <div className="max-w-2xl mx-auto flex flex-wrap gap-2 items-end justify-center">
           {technologies}

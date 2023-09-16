@@ -30,7 +30,8 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            Hello! This is an introduction Lorem ipsum
+            My favorite language that I know the most and do the most stuff
+            with!
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -51,7 +52,7 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            Hello! This is an introduction Lorem ipsum
+            That&apos;s what my favorite language (TypeScript) is a superset of!
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -76,7 +77,7 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.red }}>p</span>
           <span style={{ color: CODE_COLORS.cyan }}>&gt;</span>
           <span style={{ color: CODE_COLORS.white }}>
-            Hello world from React!
+            Used for creating modern interactive web applications
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&lt;/</span>
           <span style={{ color: CODE_COLORS.red }}>p</span>
@@ -103,8 +104,7 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.cyan }}>: </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            This is CSS, hi! This is CSS, hi! This is CSS, hi! This is CSS, hi!
-            This is CSS, hi! This is CSS, hi!
+            I also use Tailwind CSS as a part of daily work
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;;</span>
         </div>
@@ -124,7 +124,7 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.red }}>p</span>
           <span style={{ color: CODE_COLORS.cyan }}>&gt;</span>
           <span style={{ color: CODE_COLORS.white }}>
-            Hello world from HTML!
+            It&apos;s not even a programming language, but it has to be here!
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&lt;/</span>
           <span style={{ color: CODE_COLORS.red }}>p</span>
@@ -145,7 +145,8 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            Hello! This is an introduction Lorem ipsum
+            The easiest back-end technology I discovered so far! I also love to
+            do servers/gates/mediators for IoT there!
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -164,7 +165,8 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            Hello! This is Python!
+            The most latest language I learned - for empowering IoT devices and
+            trying machine learning to simplify my daily life
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -181,7 +183,7 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>Text(</span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            Hello! This is Flutter!
+            The most pleasent mobile framework I ever discovered
           </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -202,7 +204,8 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.cyan }}>: </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            This is VS Code (kind of)
+            I know this editor by heart - multiple cursors or Emmet isn&apos;t a
+            problem for me!
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
         </div>
@@ -220,7 +223,10 @@ export const SKILLS: Skill[] = [
         <div>
           <span style={{ color: CODE_COLORS.white }}>echo </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
-          <span style={{ color: CODE_COLORS.green }}>I use Arch btw</span>
+          <span style={{ color: CODE_COLORS.green }}>
+            Used for deploying the projects on Raspberry Pi at my house. I use
+            Arch btw
+          </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
         </div>
       </SkillsDescription>
@@ -236,7 +242,9 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.cyan }}>-</span>
           <span style={{ color: CODE_COLORS.white }}>m </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
-          <span style={{ color: CODE_COLORS.green }}>Awesome changes</span>
+          <span style={{ color: CODE_COLORS.green }}>
+            Always using GitHub for my projects
+          </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
         </div>
       </SkillsDescription>
