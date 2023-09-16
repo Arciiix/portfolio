@@ -28,6 +28,8 @@ import useCurrentView from "@/hooks/ui/useCurrentView";
 import AnimatedTexts, {
   AnimatedText,
 } from "../Animations/AnimatedTexts/AnimatedTexts";
+import Link from "next/link";
+import Socials from "../Socials/Socials";
 
 export default function Landing() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -109,7 +111,7 @@ export default function Landing() {
                 />
               </span>
             </div>
-            <a
+            <Link
               className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase transition-all hover:-translate-y-2 text-center flex items-center justify-center cursor-pointer hover:border-4 hover:!bg-transparent hover:!text-white"
               style={{
                 color: currentColorDark,
@@ -118,7 +120,7 @@ export default function Landing() {
               href="#content-anchor"
             >
               learn more
-            </a>
+            </Link>
           </motion.div>
           <motion.div
             initial={{ translateY: 200, opacity: 0 }}
@@ -126,6 +128,9 @@ export default function Landing() {
             transition={{ duration: 1 }}
           >
             <AnimatedDeveloper />
+            <div className="flex items-center my-3 justify-center">
+              <Socials />
+            </div>
           </motion.div>
         </div>
       </div>
