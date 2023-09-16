@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact/Contact";
 import Divider from "@/components/Divider/Divider";
 import Landing from "@/components/Landing/Landing";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
@@ -14,6 +15,7 @@ export default function Home() {
       <Divider />
       <TechnologiesVideo />
       <Projects />
+      <Contact />
     </main>
   );
 }
