@@ -2,15 +2,14 @@
 
 import useCurrentView from "@/hooks/ui/useCurrentView";
 import useWindowDimensions from "@/hooks/ui/useWindowDimensions";
-import { useInView, useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 const VIDEO_DURATION_SECONDS = 10;
 export default function TechnologiesVideo() {
   const ref = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const { scrollY } = useScroll();
   const { scrollYProgress } = useScroll({
     target: ref,
   });

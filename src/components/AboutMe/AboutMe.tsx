@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Divider from "../Divider/Divider";
 import Bolded from "../Text/BoldedText";
-import useCurrentView from "@/hooks/ui/useCurrentView";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -99,7 +98,7 @@ export default function AboutMe() {
 
             <p>And I&apos;m only 17 years old and a high school student :)</p>
           </span>
-          <div className="flex w-full items-center gap-4">
+          <div className="flex w-full items-center gap-4 flex-wrap justify-center">
             {[
               "problem-solver",
               "creative",

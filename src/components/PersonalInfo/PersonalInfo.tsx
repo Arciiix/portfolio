@@ -8,10 +8,8 @@ import Skills from "../Skills/Skills";
 import Divider from "../Divider/Divider";
 
 export default function PersonalInfo() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const { currentView } = useCurrentView(containerRef, "aboutMe");
   return (
-    <div ref={(r) => (containerRef.current = r)}>
+    <div>
       <AboutMe />
       <FunFact />
       <Divider />

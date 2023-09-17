@@ -62,9 +62,6 @@ import Socials from "../Socials/Socials";
 import styles from "./Landing.module.css";
 
 export default function Landing() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const { currentView } = useCurrentView(containerRef, "intro");
-
   const [currentFellInLoveIndex, setCurrentFellInLoveIndex] = useState(0);
 
   const currentColor = useMemo(
@@ -93,7 +90,6 @@ export default function Landing() {
   return (
     <>
       <div
-        ref={(r) => (containerRef.current = r)}
         className="min-h-screen w-full bg-opacity-10 transition-all duration-500"
         style={{
           backgroundColor: currentColorDark,
@@ -147,7 +143,7 @@ export default function Landing() {
                 color: currentColorDark,
                 backgroundColor: currentColor,
               }}
-              href="#content-anchor"
+              href="#aboutMe"
             >
               learn more
             </Link>

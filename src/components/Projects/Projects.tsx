@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import ProjectsHeader from "./ProjectsHeader/ProjectsHeader";
 import { PROJECTS } from "./Project";
