@@ -1,0 +1,4 @@
+.slider img {
+  object-fit: contain !important;
+  aspect-ratio: 1 / 1;
+}

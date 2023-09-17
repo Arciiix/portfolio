@@ -37,6 +37,8 @@ export default function RootLayout({
       return () => {
         clearTimeout(timeout);
       };
+    } else {
+      setIsLoading(false);
     }
   }, [pathname]);
 

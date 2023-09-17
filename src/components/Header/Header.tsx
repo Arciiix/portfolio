@@ -44,10 +44,10 @@ export default function Header() {
       <div key={e.name} className="group flex flex-col mx-2 cursor-pointer">
         <a
           data-to-scrollspy-id={e.name}
-          href={`#${e.name}`}
+          href={`/#${e.name}`}
           className={`transition-all text-xl ${
             currentView === e.name
-              ? "text-teal-400"
+              ? "text-teal-400 font-bold"
               : "text-white text-opacity-70"
           } group-hover:text-white`}
         >
