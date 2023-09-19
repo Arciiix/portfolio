@@ -63,6 +63,7 @@ export const PROJECTS: Project[] = [
     },
     technologies: ["TypeScript", "React", "Node.js", "Electron"],
     fields: ["Data analysis", "Corporate apps", "Monitoring", "AI"],
+    githubURL: "https://github.com/Arciiix/Coldtime",
     language: "English + Polish",
   },
   {
