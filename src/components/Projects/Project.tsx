@@ -47,6 +47,26 @@ export const PROJECTS: Project[] = [
     language: "Polish",
   },
   {
+    id: "summid",
+    name: "Summid",
+    description: (
+      <span>
+        A simple Chrome extension that allows you to quickly{" "}
+        <b>generate a written summary of a YouTube video using ChatGPT</b> (AI)
+        without the need to watch it.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/summid/logo.png",
+    tag: {
+      label: "QUICK",
+      color: "#e94584",
+    },
+    technologies: ["TypeScript", "Chrome Extensions"],
+    fields: ["Scraping", "Integration", "Tools"],
+    githubURL: "https://github.com/Arciiix/Summid",
+    language: "English",
+  },
+  {
     id: "test",
     name: "Project title",
     description: (
