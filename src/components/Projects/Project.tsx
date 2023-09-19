@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     },
     technologies: ["TypeScript", "Chrome Extensions"],
     fields: ["Scraping", "Integration", "Tools"],
-    githubURL: "https://github.com/Arciiix/Summid",
+
     language: "English",
   },
   {
