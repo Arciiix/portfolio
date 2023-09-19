@@ -87,12 +87,12 @@ export default function Contact() {
   return (
     <div className="flex p-3 m-4 flex-col lg:flex-row">
       <Lottie
-        className="flex-1 w-96 lg:w-auto"
+        className="flex-1 mx-auto lg:mx-0 w-[50vw] lg:w-auto"
         animationData={contactAnimation}
         loop={true}
       />
       <div className="flex-1 flex flex-col gap-8">
-        <span className="text-6xl text-teal-100 font-bold">👋 Say hello!</span>
+        <span className="text-6xl text-teal-100 font-bold">Say hello!</span>
         <Input
           label="Name"
           value={name}
