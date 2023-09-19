@@ -47,6 +47,25 @@ export const PROJECTS: Project[] = [
     language: "Polish",
   },
   {
+    id: "coldtime",
+    name: "Coldtime",
+    description: (
+      <span>
+        A desktop app for persisting values (i.e. temperature) over time got
+        from multiple devices. Created for POL-EKO to manage their SMART PRO
+        fridge data.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/coldtime/logo.png",
+    tag: {
+      label: "CONTEST",
+      color: "#6182e0",
+    },
+    technologies: ["TypeScript", "React", "Node.js", "Electron"],
+    fields: ["Data analysis", "Corporate apps", "Monitoring", "AI"],
+    language: "English + Polish",
+  },
+  {
     id: "summid",
     name: "Summid",
     description: (
@@ -63,25 +82,6 @@ export const PROJECTS: Project[] = [
     },
     technologies: ["TypeScript", "Chrome Extensions"],
     fields: ["Scraping", "Integration", "Tools"],
-
     language: "English",
-  },
-  {
-    id: "test",
-    name: "Project title",
-    description: (
-      <span>
-        Project description long Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Voluptas et, rerum laborum ab placeat, illo doloremque
-        exercitationem similique modi
-      </span>
-    ),
-    logoSrc: "/imgs/code.svg",
-    tag: {
-      label: "SHORTWORD",
-      color: "#60a5fa",
-    },
-    technologies: ["Technology 1", "Technology 2", "Technology 3"],
-    fields: ["Field 1", "Field 2", "Field 3", "Field 4"],
   },
 ];
