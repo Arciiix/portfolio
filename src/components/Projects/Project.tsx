@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export interface Project {
   id: string;
   name: string;
@@ -64,6 +66,38 @@ export const PROJECTS: Project[] = [
     technologies: ["TypeScript", "React", "Node.js", "Electron"],
     fields: ["Data analysis", "Corporate apps", "Monitoring", "AI"],
     githubURL: "https://github.com/Arciiix/Coldtime",
+    language: "English + Polish",
+  },
+  {
+    id: "enmet",
+    name: "Enmet",
+    description: (
+      <span>
+        An app to monitor the energy usage of Eastron SMART X96 Smart Meter
+        based on data from the database. Created during my internship @{" "}
+        <Link
+          className="link text-teal-400"
+          href="https://www.pol-eko.com.pl/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <b>POL-EKO</b>
+        </Link>
+      </span>
+    ),
+    logoSrc: "/imgs/projects/enmet/logo.png",
+    tag: {
+      label: "WORK",
+      color: "#7a9eeb",
+    },
+    technologies: ["TypeScript", "React", "Node.js", "NestJS"],
+    fields: [
+      "Data analysis",
+      "Corporate apps",
+      "API",
+      "Database",
+      "Cache system",
+    ],
     language: "English + Polish",
   },
   {
