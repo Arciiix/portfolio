@@ -119,4 +119,21 @@ export const PROJECTS: Project[] = [
     fields: ["Scraping", "Integration", "Tools"],
     language: "English",
   },
+  {
+    id: "flify",
+    name: "Flify",
+    description: (
+      <span>
+        Stream PC audio or microphone to mobile easily, in the blink of an eye.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/flify/logo.png",
+    tag: {
+      label: "USEFUL",
+      color: "#206ac4",
+    },
+    technologies: ["TypeScript", "React", "Node.js", "Electron", "Flutter"],
+    fields: ["Everyday tool", "Audio", "Integration"],
+    language: "English",
+  },
 ];
