@@ -177,4 +177,23 @@ export const PROJECTS: Project[] = [
     fields: ["Finance", "Data analysis", "Monitoring", "Corporate apps"],
     language: "English",
   },
+  {
+    id: "lightController",
+    name: "lightController",
+    description: (
+      <span>
+        Advanced automized aquarium control system with heating based on
+        temperature, statistical data charts, different light modes and
+        schedule, and more!
+      </span>
+    ),
+    logoSrc: "/imgs/projects/lightController/logo.png",
+    tag: {
+      label: "AUTOMATE",
+      color: "#2869ca",
+    },
+    technologies: ["TypeScript", "React", "Node.js", "Tasmota"],
+    fields: ["IoT", "Monitoring", "Automation", "Everyday tool", "SQLite"],
+    language: "English",
+  },
 ];
