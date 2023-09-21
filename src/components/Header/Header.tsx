@@ -7,6 +7,7 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useWindowDimensions from "@/hooks/ui/useWindowDimensions";
 import { BREAKPOINTS_LG } from "@/utils/size";
+import Link from "next/link";
 
 export const NAVIGATION_ITEMS = [
   {
@@ -68,7 +69,9 @@ export default function Header() {
         currentView !== "intro" ? "bg-teal-900" : ""
       } rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40 transition-all duration-500 flex justify-between z-40 items-center`}
     >
-      <Logo size={70} />
+      <Link href="/">
+        <Logo size={70} />
+      </Link>
 
       <div className="flex lg:hidden">
         <Hamburger isOpen={isNavigationOpen} onToggle={onNavigationToggle} />
