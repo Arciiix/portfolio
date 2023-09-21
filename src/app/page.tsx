@@ -28,7 +28,9 @@ export default function Home() {
       >
         {/* For scroll spy */}
         <div id="intro" className="relative bottom-[101vh] left-0 w-full"></div>
-        <div id="aboutMe">{/* <PersonalInfo /> */}</div>
+        <div id="aboutMe">
+          <PersonalInfo />
+        </div>
         <div id="showcase">
           <Divider />
           <TechnologiesVideo />

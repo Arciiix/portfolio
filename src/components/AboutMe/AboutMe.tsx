@@ -19,25 +19,25 @@ export default function AboutMe() {
       <h1 className="text-teal-400 font-bold text-7xl text-center">About me</h1>
       <div className="flex flex-col lg:flex-row items-center gap-6">
         <div className="flex gap-4 items-center flex-col">
-          <span className="text-3xl text-center">
+          <span className="text-3xl w-full text-left">
             My name is <Bolded text="Artur" /> and I&apos;m a software engineer.
           </span>
           <span className="text-xl text-justify">
             <span className="text-teal-400 font-bold">
-              Passionate Programmer and IoT Enthusiast 🚀
+              Passionate Back-End and IoT Enthusiast 🚀
             </span>
             <p>
               <b>Passionate about programming since childhood</b>, dedicated to
               transforming ideas into remarkable digital solutions and ready to
-              show off his hobby to people. I am a Software Engineer deeply
+              show off his hobby to people. I am a software engineer deeply
               passionate about IoT, a hobby that was ignited by my father&apos;s
-              inspiration. My professional expertise is primarily focused on IoT
-              and full-stack development, where I harmonize the virtual and the
-              tangible. Within this portfolio, you&apos;ll find a collection of
-              my IoT creations and full-stack symphonies, each reflecting my
-              dedication to both fields. Join me on this journey as I continue
-              to compose innovative digital melodies inspired by my lifelong
-              love for programming.
+              inspiration. My professional expertise is primarily focused on
+              full-stack development (with IoT), where I harmonize the virtual
+              and the tangible. Within this portfolio, you&apos;ll find a
+              collection of my IoT creations and full-stack symphonies, each
+              reflecting my dedication to both fields. Join me on this journey
+              as I continue to compose innovative digital melodies inspired by
+              my lifelong love for programming.
             </p>
             <Divider />
             <span className="text-teal-400 font-bold">
@@ -88,11 +88,11 @@ export default function AboutMe() {
                 <b>Coldtime</b>
               </Link>
               , one of my projects you can see below. During the internship, I
-              was responsible for creating an advanced data analysis app for
-              displaying the data from a smart electricity meter, communicating
-              via Modbus protocol and saving data to MySQL database. I did the
-              entire app, including back-end with caching, front-end and the
-              user manual.
+              was responsible for creating{" "}
+              <Link className="link text-teal-400" href="/projects/enmet">
+                <b>Enmet</b>
+              </Link>
+              .
             </p>
             <Divider />
 
