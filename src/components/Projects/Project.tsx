@@ -63,7 +63,14 @@ export const PROJECTS: Project[] = [
       label: "CONTEST",
       color: "#6182e0",
     },
-    technologies: ["TypeScript", "React", "Node.js", "Electron"],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Electron",
+      "Prisma",
+      "SQLite",
+    ],
     fields: ["Data analysis", "Corporate apps", "Monitoring", "AI"],
     githubURL: "https://github.com/Arciiix/Coldtime",
     language: "English + Polish",
@@ -90,7 +97,15 @@ export const PROJECTS: Project[] = [
       label: "WORK",
       color: "#7a9eeb",
     },
-    technologies: ["TypeScript", "React", "Node.js", "NestJS"],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "NestJS",
+      "Prisma",
+      "SQLite",
+      "MySQL",
+    ],
     fields: [
       "Data analysis",
       "Corporate apps",
@@ -135,6 +150,31 @@ export const PROJECTS: Project[] = [
     technologies: ["TypeScript", "React", "Node.js", "Electron", "Flutter"],
     fields: ["Everyday tool", "Audio", "Integration"],
     githubURL: "https://github.com/Arciiix/Flify",
+    language: "English",
+  },
+  {
+    id: "monity",
+    name: "Monity",
+    description: (
+      <span>
+        Personal finance manager, budget tracker, and analyzer that helps you
+        monitor your money.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/monity/logo.png",
+    tag: {
+      label: "MONEY",
+      color: "#1ea896",
+    },
+    technologies: [
+      "TypeScript",
+      "React",
+      "NestJS",
+      "Node.js",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    fields: ["Finance", "Data analysis", "Monitoring", "Corporate apps"],
     language: "English",
   },
 ];
