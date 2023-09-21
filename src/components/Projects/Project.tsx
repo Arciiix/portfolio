@@ -134,6 +134,7 @@ export const PROJECTS: Project[] = [
     },
     technologies: ["TypeScript", "React", "Node.js", "Electron", "Flutter"],
     fields: ["Everyday tool", "Audio", "Integration"],
+    githubURL: "https://github.com/Arciiix/Flify",
     language: "English",
   },
 ];
