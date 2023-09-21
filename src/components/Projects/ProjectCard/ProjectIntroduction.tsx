@@ -26,7 +26,7 @@ export default function ProjectIntroduction({
     let maxLength = 0;
     for (let i = 0; i < text.length; i++) {
       textArr.push([]);
-      let iterations = text.length - 10 * Math.random();
+      let iterations = text.length - 5 * Math.random();
       for (let j = 0; j < iterations; j++) {
         let randomString = randomText();
         textArr[i].push(randomString);
