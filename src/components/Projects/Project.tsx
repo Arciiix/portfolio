@@ -221,4 +221,21 @@ export const PROJECTS: Project[] = [
     fields: ["Automation", "Innovation", "Engineering", "AI"],
     language: "every single one!",
   },
+  {
+    id: "portfolio",
+    name: "Portfolio",
+    description: (
+      <span>I guess this website says more than a thousand words! 😜</span>
+    ),
+    logoSrc: "/logo/logo-transparent.png",
+    githubURL: "https://github.com/Arciiix/portfolio",
+    demoURL: "/",
+    tag: {
+      label: "PRESENT",
+      color: "#ffffff",
+    },
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    fields: ["Front-end", "Design", "Website"],
+    language: "English",
+  },
 ];
