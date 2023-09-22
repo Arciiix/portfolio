@@ -1,8 +1,6 @@
 import FAQSection from "@/components/FAQSection/FAQSection";
 import { PROJECTS } from "@/components/Projects/Project";
 import ProjectDescription from "@/components/Projects/ProjectDescription/ProjectDescription";
-import Slider from "@/components/Slider/Slider";
-import Link from "next/link";
 
 const project = PROJECTS.find((e) => e.id === "ruchWahadlowy")!;
 

@@ -80,7 +80,8 @@ export const PROJECTS: Project[] = [
     name: "Enmet",
     description: (
       <span>
-        An app to monitor the energy usage of Eastron SMART X96 Smart Meter
+        An app to monitor the energy usage of{" "}
+        <b>Eastron SMART X96 Smart Meter</b>
         based on data from the database. Created during my internship @{" "}
         <Link
           className="link text-teal-400"
@@ -139,7 +140,8 @@ export const PROJECTS: Project[] = [
     name: "Flify",
     description: (
       <span>
-        Stream PC audio or microphone to mobile easily, in the blink of an eye.
+        <b>Stream PC audio</b> or microphone to mobile easily, in the blink of
+        an eye.
       </span>
     ),
     logoSrc: "/imgs/projects/flify/logo.png",
@@ -182,8 +184,8 @@ export const PROJECTS: Project[] = [
     name: "lightController",
     description: (
       <span>
-        Advanced automized aquarium control system with heating based on
-        temperature, statistical data charts, different light modes and
+        Advanced, automated <b>aquarium control system</b> with heating based on
+        temperature, statistical data charts, different light modes, their
         schedule, and more!
       </span>
     ),
@@ -201,10 +203,13 @@ export const PROJECTS: Project[] = [
     name: "Ruch wahadłowy",
     description: (
       <span>
-        Revolutionizing road safety with cutting-edge computer vision
-        alternating traffic management system! <i>Ruch wahadłowy</i> project
-        ensures that you&apos;ll never have to worry about red light runners or
-        long traffic jams again, making the roads safer for everyone.
+        Revolutionizing road safety with{" "}
+        <b>
+          cutting-edge computer vision alternating traffic management system!
+        </b>{" "}
+        <i>Ruch wahadłowy</i> project ensures that you&apos;ll never have to
+        worry about red light runners or long traffic jams again, making the
+        roads safer for everyone.
       </span>
     ),
     logoSrc: "/imgs/projects/ruchWahadlowy/logo.png",
