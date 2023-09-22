@@ -196,4 +196,24 @@ export const PROJECTS: Project[] = [
     fields: ["IoT", "Monitoring", "Automation", "Everyday tool", "SQLite"],
     language: "English",
   },
+  {
+    id: "ruchWahadlowy",
+    name: "Ruch wahadłowy",
+    description: (
+      <span>
+        Revolutionizing road safety with cutting-edge computer vision
+        alternating traffic management system! <i>Ruch wahadłowy</i> project
+        ensures that you&apos;ll never have to worry about red light runners or
+        long traffic jams again, making the roads safer for everyone.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/ruchWahadlowy/logo.png",
+    tag: {
+      label: "CHANGE",
+      color: "#f9c00d",
+    },
+    technologies: ["OpenCV", "Python", "Node.js", "Flutter", "Arduino"],
+    fields: ["Automation", "Innovation", "Engineering", "AI"],
+    language: "every single one!",
+  },
 ];
