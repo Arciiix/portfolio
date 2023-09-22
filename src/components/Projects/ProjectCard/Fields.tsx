@@ -31,7 +31,7 @@ export default function Fields({ project }: BasicProjectDisplayProps) {
       >
         #{project.tag.label}
       </span>
-      <div className="flex flex-wrap gap-2 justify-center h-max">{fields}</div>
+      <div className="flex flex-wrap gap-2 justify-start h-max">{fields}</div>
     </div>
   );
 }
