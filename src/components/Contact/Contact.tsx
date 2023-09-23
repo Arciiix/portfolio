@@ -38,7 +38,9 @@ export default function Contact() {
 
   const [sendingStatus, setSendingStatus] = useState<SendingStatus>("idle");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
     if (sendingStatus !== "idle") return;
     // Validate the form
     let errors: ContactErrors = {
@@ -72,16 +74,32 @@ export default function Contact() {
   };
 
   const send = async () => {
-    // TODO: Implement the send logic
-    setSendingStatus("sent");
+    // TODO: Migrate to normal form
+    const formData = {
+      "form-name": "arciiix-contact",
+      name,
+      surname,
+      email,
+      message,
+    };
 
-    setTimeout(() => {
-      setName("");
-      setSurname("");
-      setEmail("");
-      setMessage("");
-      setSendingStatus("idle");
-    }, 5000);
+    const request = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+
+    if (request.status === 200) {
+      setSendingStatus("sent");
+
+      setTimeout(() => {
+        setName("");
+        setSurname("");
+        setEmail("");
+        setMessage("");
+        setSendingStatus("idle");
+      }, 5000);
+    }
   };
 
   return (
@@ -91,7 +109,13 @@ export default function Contact() {
         animationData={contactAnimation}
         loop={true}
       />
-      <div className="flex-1 flex flex-col gap-8">
+      <form
+        className="flex-1 flex flex-col gap-8"
+        data-netlify="true"
+        name="arciiix-contact"
+        method="POST"
+        onSubmit={handleSubmit}
+      >
         <span className="text-6xl text-teal-100 font-bold">Say hello!</span>
         <Input
           label="Name"
@@ -119,7 +143,7 @@ export default function Contact() {
         />
         <button
           className="text-teal-400 border-teal-400 hover:bg-teal-400 hover:text-teal-900 duration-500 border-2 m-3 rounded-3xl p-3 text-2xl font-extrabold uppercase transition-all text-center flex items-center justify-center cursor-pointer"
-          onClick={handleSubmit}
+          type={"submit"}
         >
           {sendingStatus === "sending"
             ? "sending..."
@@ -131,7 +155,7 @@ export default function Contact() {
           <span className="text-teal-100">or reach me on</span>
           <Socials />
         </div>
-      </div>
+      </form>
     </div>
   );
 }
