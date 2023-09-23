@@ -48,6 +48,15 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={inter.className}>
+        {/* For the Netlify form to work */}
+        <form
+          className="hidden"
+          data-netlify="true"
+          name="arciiix-contact"
+          method="POST"
+        >
+          <input type="hidden" name="form-name" value="arciiix-contact" />
+        </form>
         <GlobalWrapper>{children}</GlobalWrapper>
       </body>
     </html>
