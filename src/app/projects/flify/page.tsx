@@ -19,6 +19,39 @@ export default function Flify() {
         url={`https://www.youtube.com/embed/p5-mp5KFIAI?si=mUfREnFlJTdM34wh`}
         title="Summid"
       />
+      <FAQSection title="Choose your side 👀">
+        <div className="m-4 flex gap-4 items-center mx-auto flex-col">
+          <div className="flex gap-4 items-center flex-col lg:flex-row">
+            <FakeProduct
+              imageSrc="/imgs/projects/flify/speaker.jpg"
+              imageAlt="Speaker"
+              title="A wireless speaker"
+              description="Required for audio playback"
+              price="830 PLN"
+            />
+            <div className="text-6xl text-red-200 text-opacity-90">+</div>
+            <FakeProduct
+              imageSrc="/imgs/projects/flify/bluetooth-adapter.jpg"
+              imageAlt="Bluetooth adapter"
+              title="A Bluetooth adapter"
+              description="Required if your computer doesn't have Bluetooth built-in"
+              price="120 PLN"
+            />
+          </div>
+          <div className="text-sm text-slate-400">Images via Pixabay</div>
+          <span className="text-7xl m-5 text-green-200 font-bold">OR</span>
+          <div>
+            <FakeProduct
+              imageSrc="/imgs/projects/flify/logo.png"
+              imageAlt="Flify"
+              title="Flify"
+              description="A completely free, easy to use app"
+              price="0 PLN"
+              isBlue
+            />
+          </div>
+        </div>
+      </FAQSection>
 
       <FAQSection title="What for?">
         <span>
@@ -72,39 +105,6 @@ export default function Flify() {
             setup - start streaming audio within seconds
           </li>
         </ul>
-      </FAQSection>
-      <FAQSection title="Choose your side 👀">
-        <div className="m-4 flex gap-4 items-center mx-auto flex-col">
-          <div className="flex gap-4 items-center flex-col lg:flex-row">
-            <FakeProduct
-              imageSrc="/imgs/projects/flify/speaker.jpg"
-              imageAlt="Speaker"
-              title="A wireless speaker"
-              description="Required for audio playback"
-              price="830 PLN"
-            />
-            <div className="text-6xl text-red-200 text-opacity-90">+</div>
-            <FakeProduct
-              imageSrc="/imgs/projects/flify/bluetooth-adapter.jpg"
-              imageAlt="Bluetooth adapter"
-              title="A Bluetooth adapter"
-              description="Required if your computer doesn't have Bluetooth built-in"
-              price="120 PLN"
-            />
-          </div>
-          <div className="text-sm text-slate-400">Images via Pixabay</div>
-          <span className="text-7xl m-5 text-green-200 font-bold">OR</span>
-          <div>
-            <FakeProduct
-              imageSrc="/imgs/projects/flify/logo.png"
-              imageAlt="Flify"
-              title="Flify"
-              description="A completely free, easy to use app"
-              price="0 PLN"
-              isBlue
-            />
-          </div>
-        </div>
       </FAQSection>
 
       <Slider
