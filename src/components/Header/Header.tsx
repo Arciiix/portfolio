@@ -46,22 +46,17 @@ export default function Header() {
         <a
           data-to-scrollspy-id={e.name}
           href={`/#${e.name}`}
-          className={`transition-all text-xl ${
-            currentView === e.name
-              ? "text-teal-400 font-bold"
-              : "text-white text-opacity-70"
-          } group-hover:text-white`}
+          className={`transition-all text-xl group-hover:text-teal-400 group-hover:font-boldtext-white text-opacity-70
+          `}
         >
           {e.displayName}
         </a>
         <span
-          className={`block max-w-0 ${
-            currentView === e.name ? "max-w-full" : ""
-          } transition-all duration-500 h-0.5 bg-teal-400`}
+          className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-teal-400`}
         ></span>
       </div>
     ));
-  }, [currentView]);
+  }, []);
 
   return (
     <div
