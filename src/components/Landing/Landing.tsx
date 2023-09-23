@@ -25,7 +25,7 @@ const FELL_IN_LOVE_TEXTS: AnimatedText[] = [
     color: "#A853A8",
   },
   {
-    text: "Cybersec",
+    text: "Cybersecurity",
     color: "#96F7B1",
   },
   {
