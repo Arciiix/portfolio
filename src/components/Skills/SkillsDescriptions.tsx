@@ -146,7 +146,7 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
             The easiest back-end technology I discovered so far! I also love to
-            do servers/gates/mediators for IoT there!
+            do servers/gates/mediators for IoT there! I also use NestJS
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
