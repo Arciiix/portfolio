@@ -63,7 +63,7 @@ export default function AboutMe() {
               >
                 best one in Poland.
               </Link>{" "}
-              Managed to get the highest grade out of entire school for two
+              Managed to get the highest grade in the entire school for two
               years in a row.
             </p>
             <Divider />
