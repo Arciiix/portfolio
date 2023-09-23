@@ -82,7 +82,9 @@ export default function ProjectIntroduction({
           width={140}
           height={140}
         />
-        <h1 className="text-7xl lg:text-8xl font-bold">{displayedText}</h1>
+        <h1 className="text-4xl lg:text-6xl xl:text-8xl font-bold text-center">
+          {displayedText}
+        </h1>
       </div>
       <div className="flex gap-2 justify-center my-8">
         {project.githubURL ? (
