@@ -175,6 +175,27 @@ export const SKILLS: Skill[] = [
     ),
   },
   {
+    name: "Arduino",
+    image: "/imgs/technologies/arduino.svg",
+    codeSnippetContent: (
+      <SkillsDescription>
+        <div>
+          <span style={{ color: CODE_COLORS.white }}>lcd.</span>
+          <span style={{ color: CODE_COLORS.blue }}>print</span>
+          <span style={{ color: CODE_COLORS.yellow }}>(</span>
+          <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
+          <span style={{ color: CODE_COLORS.green }}>
+            That&apos;s where I wrote my first line of code ever. Used by me for
+            programming embedded IoT devices
+          </span>
+          <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
+          <span style={{ color: CODE_COLORS.yellow }}>)</span>
+          <span style={{ color: CODE_COLORS.cyan }}>;</span>
+        </div>
+      </SkillsDescription>
+    ),
+  },
+  {
     name: "Flutter",
     image: "/imgs/technologies/flutter.svg",
     codeSnippetContent: (
