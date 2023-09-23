@@ -26,27 +26,73 @@ export interface BasicProjectDisplayProps {
 
 // TODO: Actual projects
 export const PROJECTS: Project[] = [
+  // TODO: Add Handy here
   {
-    id: "helpnow",
-    name: "HelpNow",
+    id: "flify",
+    name: "Flify",
     description: (
       <span>
-        A project for hackathon that addresses a critical gap in the market by
-        providing <b>a platform for requesting assistance</b> - this app enabled
-        users to create &quot;help request posts&quot; - I like to refer to that
-        as <b>the Glovo of helping each other</b>.
+        <b>Stream PC audio</b> or microphone to mobile easily, in the blink of
+        an eye.
       </span>
     ),
-    logoSrc: "/imgs/projects/helpnow/logo.jpg",
+    logoSrc: "/imgs/projects/flify/logo.png",
     tag: {
-      label: "HELP",
-      color: "#8dffcb",
+      label: "USEFUL",
+      color: "#206ac4",
     },
-    technologies: ["React + TypeScript", "Chakra UI", "Firebase"],
-    fields: ["Front-end", "Teamwork", "Project managment"],
-    githubURL: "https://github.com/HelpNowOfficialProject/HelpNow",
-    demoURL: "https://helpnow.netlify.app/",
-    language: "Polish",
+    technologies: ["TypeScript", "React", "Node.js", "Electron", "Flutter"],
+    fields: ["Everyday tool", "Audio", "Integration"],
+    githubURL: "https://github.com/Arciiix/Flify",
+    language: "English",
+  },
+  {
+    id: "ruchWahadlowy",
+    name: "Ruch wahadłowy",
+    description: (
+      <span>
+        Revolutionizing road safety with{" "}
+        <b>
+          cutting-edge computer vision alternating traffic management system!
+        </b>{" "}
+        <i>Ruch wahadłowy</i> project ensures that you&apos;ll never have to
+        worry about red light runners or long traffic jams again, making the
+        roads safer for everyone.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/ruchWahadlowy/logo.png",
+    tag: {
+      label: "CHANGE",
+      color: "#f9c00d",
+    },
+    technologies: ["OpenCV", "Python", "Node.js", "Flutter", "Arduino"],
+    fields: ["Automation", "Innovation", "Engineering", "AI"],
+    language: "every single one!",
+  },
+  {
+    id: "monity",
+    name: "Monity",
+    description: (
+      <span>
+        Personal finance manager, budget tracker, and analyzer that helps you
+        monitor your money.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/monity/logo.png",
+    tag: {
+      label: "MONEY",
+      color: "#1ea896",
+    },
+    technologies: [
+      "TypeScript",
+      "React",
+      "NestJS",
+      "Node.js",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    fields: ["Finance", "Data analysis", "Monitoring", "Corporate apps"],
+    language: "English",
   },
   {
     id: "coldtime",
@@ -117,69 +163,6 @@ export const PROJECTS: Project[] = [
     language: "English + Polish",
   },
   {
-    id: "summid",
-    name: "Summid",
-    description: (
-      <span>
-        A simple Chrome extension that allows you to quickly{" "}
-        <b>generate a written summary of a YouTube video using ChatGPT</b> (AI)
-        without the need to watch it.
-      </span>
-    ),
-    logoSrc: "/imgs/projects/summid/logo.png",
-    tag: {
-      label: "QUICK",
-      color: "#e94584",
-    },
-    technologies: ["TypeScript", "Chrome Extensions"],
-    fields: ["Scraping", "Integration", "Tools"],
-    language: "English",
-  },
-  {
-    id: "flify",
-    name: "Flify",
-    description: (
-      <span>
-        <b>Stream PC audio</b> or microphone to mobile easily, in the blink of
-        an eye.
-      </span>
-    ),
-    logoSrc: "/imgs/projects/flify/logo.png",
-    tag: {
-      label: "USEFUL",
-      color: "#206ac4",
-    },
-    technologies: ["TypeScript", "React", "Node.js", "Electron", "Flutter"],
-    fields: ["Everyday tool", "Audio", "Integration"],
-    githubURL: "https://github.com/Arciiix/Flify",
-    language: "English",
-  },
-  {
-    id: "monity",
-    name: "Monity",
-    description: (
-      <span>
-        Personal finance manager, budget tracker, and analyzer that helps you
-        monitor your money.
-      </span>
-    ),
-    logoSrc: "/imgs/projects/monity/logo.png",
-    tag: {
-      label: "MONEY",
-      color: "#1ea896",
-    },
-    technologies: [
-      "TypeScript",
-      "React",
-      "NestJS",
-      "Node.js",
-      "Prisma",
-      "PostgreSQL",
-    ],
-    fields: ["Finance", "Data analysis", "Monitoring", "Corporate apps"],
-    language: "English",
-  },
-  {
     id: "lightController",
     name: "lightController",
     description: (
@@ -199,28 +182,47 @@ export const PROJECTS: Project[] = [
     language: "English",
   },
   {
-    id: "ruchWahadlowy",
-    name: "Ruch wahadłowy",
+    id: "helpnow",
+    name: "HelpNow",
     description: (
       <span>
-        Revolutionizing road safety with{" "}
-        <b>
-          cutting-edge computer vision alternating traffic management system!
-        </b>{" "}
-        <i>Ruch wahadłowy</i> project ensures that you&apos;ll never have to
-        worry about red light runners or long traffic jams again, making the
-        roads safer for everyone.
+        A project for hackathon that addresses a critical gap in the market by
+        providing <b>a platform for requesting assistance</b> - this app enabled
+        users to create &quot;help request posts&quot; - I like to refer to that
+        as <b>the Glovo of helping each other</b>.
       </span>
     ),
-    logoSrc: "/imgs/projects/ruchWahadlowy/logo.png",
+    logoSrc: "/imgs/projects/helpnow/logo.jpg",
     tag: {
-      label: "CHANGE",
-      color: "#f9c00d",
+      label: "HELP",
+      color: "#8dffcb",
     },
-    technologies: ["OpenCV", "Python", "Node.js", "Flutter", "Arduino"],
-    fields: ["Automation", "Innovation", "Engineering", "AI"],
-    language: "every single one!",
+    technologies: ["React + TypeScript", "Chakra UI", "Firebase"],
+    fields: ["Front-end", "Teamwork", "Project managment"],
+    githubURL: "https://github.com/HelpNowOfficialProject/HelpNow",
+    demoURL: "https://helpnow.netlify.app/",
+    language: "Polish",
   },
+  {
+    id: "summid",
+    name: "Summid",
+    description: (
+      <span>
+        A simple Chrome extension that allows you to quickly{" "}
+        <b>generate a written summary of a YouTube video using ChatGPT</b> (AI)
+        without the need to watch it.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/summid/logo.png",
+    tag: {
+      label: "QUICK",
+      color: "#e94584",
+    },
+    technologies: ["TypeScript", "Chrome Extensions"],
+    fields: ["Scraping", "Integration", "Tools"],
+    language: "English",
+  },
+
   {
     id: "portfolio",
     name: "Portfolio",
