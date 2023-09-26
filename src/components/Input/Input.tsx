@@ -1,11 +1,18 @@
 export interface InputProps {
+  name: string;
   value: string;
   onChange: (newValue: string) => void;
   label: string;
   error?: string | null;
 }
 
-export default function Input({ value, onChange, label, error }: InputProps) {
+export default function Input({
+  name,
+  value,
+  onChange,
+  label,
+  error,
+}: InputProps) {
   return (
     <div className="relative h-11 w-full min-w-[200px]">
       <input
@@ -14,6 +21,7 @@ export default function Input({ value, onChange, label, error }: InputProps) {
         } h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 ${
           error ? "focus:border-red-500" : "focus:border-teal-500"
         } focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50`}
+        name={name}
         placeholder={" "}
         onChange={(e) => onChange(e.target.value)}
         value={value}

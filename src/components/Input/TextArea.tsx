@@ -3,6 +3,7 @@ import { InputProps } from "./Input";
 type TextAreaProps = InputProps;
 
 export default function TextArea({
+  name,
   value,
   onChange,
   label,
@@ -20,6 +21,7 @@ export default function TextArea({
         onChange={(e) => onChange(e.target.value)}
         value={value}
         rows={8}
+        name={name}
       />
       <label
         className={`${
