@@ -17,7 +17,7 @@ export default function Flify() {
 
       <YouTubeEmbed
         url={`https://www.youtube.com/embed/p5-mp5KFIAI?si=mUfREnFlJTdM34wh`}
-        title="Summid"
+        title="Flify"
       />
       <FAQSection title="Choose your side 👀">
         <div className="m-4 flex gap-4 items-center mx-auto flex-col">

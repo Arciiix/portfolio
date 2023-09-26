@@ -26,7 +26,37 @@ export interface BasicProjectDisplayProps {
 
 // TODO: Actual projects
 export const PROJECTS: Project[] = [
-  // TODO: Add Handy here
+  {
+    id: "handy",
+    name: "Handy",
+    description: (
+      <span>
+        Easily control your <b>home automations using hand gestures</b>, at any
+        time. This app recognizes the gestures{" "}
+        <b>
+          using your security camera footage and controls every IoT action you
+          can dream of
+        </b>
+        . Nothing is impossible - make your life feel like you were{" "}
+        <b>the main character of a sci-fi movie.</b>
+      </span>
+    ),
+    logoSrc: "/imgs/projects/handy/logo.png",
+    tag: {
+      label: "IMPRESSIVE",
+      color: "#206ac4",
+    },
+    technologies: [
+      "Python",
+      "scikit-learn",
+      "MediaPipe",
+      "Flutter",
+      "Home Assistant",
+    ],
+    fields: ["Everyday tool", "IoT", "AI", "Integration", "Innovation"],
+    githubURL: "https://github.com/Arciiix/Handy",
+    language: "English + Polish",
+  },
   {
     id: "flify",
     name: "Flify",
