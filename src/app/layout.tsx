@@ -56,6 +56,11 @@ export default function RootLayout({
           method="POST"
         >
           <input type="hidden" name="form-name" value="arciiix-contact" />
+          {/* All of the fields */}
+          <input name="name" />
+          <input name="surname" />
+          <input name="email" />
+          <input name="message" />
         </form>
         <GlobalWrapper>{children}</GlobalWrapper>
       </body>
