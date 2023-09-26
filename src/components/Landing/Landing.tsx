@@ -138,7 +138,7 @@ export default function Landing() {
               </span>
             </div>
             <Link
-              className="m-3 lg:w-96 h-32 rounded-3xl text-5xl font-extrabold uppercase transition-all hover:-translate-y-2 text-center flex items-center justify-center cursor-pointer hover:border-4 hover:!bg-transparent hover:!text-white"
+              className="m-3 lg:w-96 h-32 rounded-3xl text-4xl lg:text-5xl font-extrabold uppercase transition-all hover:-translate-y-2 text-center flex items-center justify-center cursor-pointer hover:border-4 hover:!bg-transparent hover:!text-white"
               style={{
                 color: currentColorDark,
                 backgroundColor: currentColor,
