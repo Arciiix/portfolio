@@ -9,7 +9,7 @@ export default function RuchWahadlowy() {
     <div className="flex flex-col gap-2">
       <ProjectDescription project={project} />
 
-      <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold">
+      <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold break-words overflow-hidden max-w-full">
         I cannot share much information or show too many things about it since
         it&apos;s a potential innovation contests runner and is a property of
         me, my team and school. Please contact me for more information.

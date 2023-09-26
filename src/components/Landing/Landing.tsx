@@ -143,7 +143,7 @@ export default function Landing() {
                 color: currentColorDark,
                 backgroundColor: currentColor,
               }}
-              href="#aboutMe"
+              href="/#aboutMe"
             >
               learn more
             </Link>

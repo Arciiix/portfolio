@@ -127,8 +127,8 @@ export const PROJECTS: Project[] = [
     description: (
       <span>
         An app to monitor the energy usage of{" "}
-        <b>Eastron SMART X96 Smart Meter</b>
-        based on data from the database. Created during my internship @{" "}
+        <b>Eastron SMART X96 Smart Meter</b> based on data from the database.
+        Created during my internship @{" "}
         <Link
           className="link text-teal-400"
           href="https://www.pol-eko.com.pl/en/"

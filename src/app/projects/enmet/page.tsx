@@ -12,7 +12,7 @@ export default function Enmet() {
     <div className="flex flex-col gap-2">
       <ProjectDescription project={project} />
 
-      <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold">
+      <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold break-words max-w-full overflow-hidden">
         Since this app was created at the work, I cannot share much information
         about it!
       </span>
