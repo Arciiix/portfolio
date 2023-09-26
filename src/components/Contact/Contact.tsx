@@ -85,8 +85,10 @@ export default function Contact() {
 
     const request = await fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      // headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/json" },
+      // body: new URLSearchParams(formData).toString(),
+      body: JSON.stringify(formData),
     });
 
     if (request.status === 200) {
