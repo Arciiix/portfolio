@@ -1,6 +1,7 @@
 import FAQSection from "@/components/FAQSection/FAQSection";
 import { PROJECTS } from "@/components/Projects/Project";
 import ProjectDescription from "@/components/Projects/ProjectDescription/ProjectDescription";
+import YouTubeEmbed from "@/components/YouTubeEmbed/YouTubeEmbed";
 
 const project = PROJECTS.find((e) => e.id === "ruchWahadlowy")!;
 
@@ -8,6 +9,17 @@ export default function RuchWahadlowy() {
   return (
     <div className="flex flex-col gap-2">
       <ProjectDescription project={project} />
+
+      <span className="text-center text-3xl text-teal-400 font-bold">
+        Watch the video to learn more!
+      </span>
+      <span className="text-blue-400 bg-blue-900 bg-opacity-20 p-2 font-bold rounded-2xl text-center w-max mx-auto">
+        English captions available
+      </span>
+      <YouTubeEmbed
+        url={`https://www.youtube.com/embed/57xFxJmKs_w?si=I68Hlv8Ijn-Q7lCN`}
+        title="Ruch wahadłowy"
+      />
 
       <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold break-words overflow-hidden max-w-full">
         I cannot share much information or show too many things about it since
