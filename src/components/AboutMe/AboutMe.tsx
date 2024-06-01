@@ -1,11 +1,13 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import AnimatedUnderlineTitle from "../Animations/AnimatedUnderlineTitle/AnimatedUnderlineTitle";
 import Divider from "../Divider/Divider";
 import Bolded from "../Text/BoldedText";
-import { useRef } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { useState } from "react";
 
 export default function AboutMe() {
+  const [animationPlaying, setAnimationPlaying] = useState(true);
   return (
     <motion.div
       className="mt-20 w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col"
@@ -15,8 +17,14 @@ export default function AboutMe() {
         opacity: 1,
         transition: { duration: 0.8 },
       }}
+      onAnimationComplete={() => setAnimationPlaying(false)}
+      onAnimationStart={() => setAnimationPlaying(true)}
     >
-      <h1 className="text-teal-400 font-bold text-7xl text-center">About me</h1>
+      <AnimatedUnderlineTitle
+        title="About me"
+        className="text-center m-auto"
+        allowedToShow={!animationPlaying}
+      />
       <div className="flex flex-col lg:flex-row items-center gap-6">
         <div className="flex gap-4 items-center flex-col">
           <span className="text-3xl w-full text-left">

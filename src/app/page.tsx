@@ -2,7 +2,6 @@
 
 import currentViewAtom, { CurrentView } from "@/atoms/ui/currentView.atom";
 import Contact from "@/components/Contact/Contact";
-import Divider from "@/components/Divider/Divider";
 import { NAVIGATION_ITEMS } from "@/components/Header/Header";
 import Landing from "@/components/Landing/Landing";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
@@ -46,12 +45,11 @@ export default function Home() {
         <div id="aboutMe">
           <PersonalInfo />
         </div>
-        <div id="showcase">
-          <Divider />
-          <TechnologiesVideo />
-        </div>
         <div id="projects">
           <Projects />
+        </div>
+        <div id="showcase">
+          <TechnologiesVideo />
         </div>
         <div id="contact">
           <Contact />

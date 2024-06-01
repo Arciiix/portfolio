@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import CodeSnippet from "../CodeSnippet/CodeSnippet";
 import { SKILLS } from "./SkillsDescriptions";
+import AnimatedUnderlineTitle from "../Animations/AnimatedUnderlineTitle/AnimatedUnderlineTitle";
 
 export default function Skills() {
+  const [animationPlaying, setAnimationPlaying] = useState(true);
+
   const technologies = useMemo(() => {
     return SKILLS.map((e, index) => {
       return (
@@ -44,13 +47,17 @@ export default function Skills() {
         opacity: 1,
         transition: { duration: 0.8 },
       }}
+      onAnimationComplete={() => setAnimationPlaying(false)}
+      onAnimationStart={() => setAnimationPlaying(true)}
     >
       <span className="text-teal-100 text-lg">
         Those Make Dreams Reality. ✨
       </span>
-      <span className="text-4xl lg:text-7xl font-bold text-teal-400 text-wrap max-w-[100vw] m-auto">
-        Skills & technologies
-      </span>
+      <AnimatedUnderlineTitle
+        title="Skills & technologies"
+        className="text-4xl lg:text-7xl font-bold text-teal-400 text-wrap max-w-[100vw] m-auto"
+        allowedToShow={!animationPlaying}
+      ></AnimatedUnderlineTitle>
       <div className="m-8">
         <span className="text-xl p-3 m-3 max-w-5xl mb-5 block mx-auto">
           Since my most beloved fields of programming are{" "}

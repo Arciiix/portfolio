@@ -26,6 +26,7 @@
     "react-text-transition": "^3.1.0",
     "react-ui-scrollspy": "^2.3.0",
     "recoil": "^0.7.7",
+    "rough-notation": "^0.5.1",
     "typescript": "5.2.2"
   },
   "devDependencies": {

@@ -1,11 +1,10 @@
 "use client";
-import Divider from "../Divider/Divider";
 import Lottie from "lottie-react";
-import contactAnimation from "./contactAnimation.json";
+import { useState } from "react";
 import Input from "../Input/Input";
-import { useRef, useState } from "react";
 import TextArea from "../Input/TextArea";
 import Socials from "../Socials/Socials";
+import contactAnimation from "./contactAnimation.json";
 
 interface ContactErrors {
   name: string | null;

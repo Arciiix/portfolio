@@ -2,7 +2,7 @@
 
 import styles from "./AnimatedHeader.module.css";
 
-type AnimatedHeaderProps = {
+type StyledHeaderProps = {
   title: string;
   className?: string | null;
 };
@@ -10,7 +10,7 @@ type AnimatedHeaderProps = {
 export default function AnimatedHeader({
   title,
   className,
-}: AnimatedHeaderProps) {
+}: StyledHeaderProps) {
   return (
     <span
       className={`${styles.glitch} text-7xl text-teal-400 font-bold font-mono ${

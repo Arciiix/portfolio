@@ -19,12 +19,13 @@ export const NAVIGATION_ITEMS = [
     displayName: "About me",
   },
   {
-    name: "showcase",
-    displayName: "Showcase",
-  },
-  {
     name: "projects",
     displayName: "Projects",
+    special: true,
+  },
+  {
+    name: "showcase",
+    displayName: "Showcase",
   },
   {
     name: "contact",
@@ -46,7 +47,11 @@ export default function Header() {
         <a
           data-to-scrollspy-id={e.name}
           href={`/#${e.name}`}
-          className={`transition-all text-xl group-hover:text-teal-400 group-hover:font-boldtext-white text-opacity-70
+          className={`transition-all text-xl group-hover:text-teal-400 group-hover:font-bold text-opacity-70 ${
+            e.special
+              ? "font-bold bg-gradient-to-r  from-green-200 to-blue-300 bg-clip-text text-transparent"
+              : "text-white"
+          }
           `}
         >
           {e.displayName}
