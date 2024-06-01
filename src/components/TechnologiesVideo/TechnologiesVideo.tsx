@@ -5,7 +5,7 @@ import useWindowDimensions from "@/hooks/ui/useWindowDimensions";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-const VIDEO_DURATION_SECONDS = 6;
+const VIDEO_DURATION_SECONDS = 3;
 export default function TechnologiesVideo() {
   const ref = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -35,7 +35,7 @@ export default function TechnologiesVideo() {
       <video
         ref={(r) => (videoRef.current = r)}
         className={`top-1/2 -translate-y-1/2 sticky w-screen h-screen object-cover`}
-        src={"/background.mp4"}
+        src={"/background-encoded.mp4"}
         muted
         preload="metadata"
         autoPlay={false}
