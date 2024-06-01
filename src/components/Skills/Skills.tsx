@@ -54,7 +54,7 @@ export default function Skills() {
         Those Make Dreams Reality. ✨
       </span>
       <AnimatedUnderlineTitle
-        title="Skills & technologies"
+        title="Skills"
         className="text-4xl lg:text-7xl font-bold text-teal-400 text-wrap max-w-[100vw] m-auto"
         allowedToShow={!animationPlaying}
       ></AnimatedUnderlineTitle>
