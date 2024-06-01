@@ -40,6 +40,7 @@ export default function Skills() {
   }, []);
   return (
     <motion.div
+      id="skills"
       className="flex flex-col gap-3 text-center"
       initial={{ translateX: -200, opacity: 0 }}
       whileInView={{

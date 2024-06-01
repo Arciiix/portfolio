@@ -9,10 +9,10 @@ import Projects from "@/components/Projects/Projects";
 import TechnologiesVideo from "@/components/TechnologiesVideo/TechnologiesVideo";
 import { useEffect } from "react";
 import ScrollSpy from "react-ui-scrollspy";
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 
 export default function Home() {
-  const [currentView, setCurrentView] = useRecoilState(currentViewAtom);
+  const setCurrentView = useSetRecoilState(currentViewAtom);
 
   useEffect(() => {
     // Only at first render
