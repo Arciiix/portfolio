@@ -145,8 +145,28 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            The easiest back-end technology I discovered so far! I also love to
-            do servers/gates/mediators for IoT there! I also use NestJS
+            I love to build various gates/mediators for my IoT projects there!
+          </span>
+          <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
+          <span style={{ color: CODE_COLORS.yellow }}>)</span>
+          <span style={{ color: CODE_COLORS.cyan }}>;</span>
+        </div>
+      </SkillsDescription>
+    ),
+  },
+  {
+    name: "ASP.NET (C#)",
+    image: "/imgs/technologies/csharp.svg",
+    codeSnippetContent: (
+      <SkillsDescription>
+        <div>
+          <span style={{ color: CODE_COLORS.white }}>Console</span>
+          <span style={{ color: CODE_COLORS.cyan }}>.</span>
+          <span style={{ color: CODE_COLORS.blue }}>WriteLine</span>
+          <span style={{ color: CODE_COLORS.yellow }}>(</span>
+          <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
+          <span style={{ color: CODE_COLORS.green }}>
+            My ultimate back-end solution that I&apos;m currently learning
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -165,8 +185,8 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            The most latest language I learned - for empowering IoT devices and
-            trying machine learning to simplify my daily life
+            For empowering IoT devices and trying machine learning to simplify
+            my daily life
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -185,8 +205,9 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>(</span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            That&apos;s where I wrote my first line of code ever. Used by me for
-            programming embedded IoT devices
+            That&apos;s where I wrote my first line of code ever. Nowadays I use
+            PlatformIO - that&apos;s how I&apos;m programming embedded IoT
+            devices
           </span>
           <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
@@ -204,34 +225,10 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.yellow }}>Text(</span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            The most pleasent mobile framework I ever discovered
+            The most pleasant mobile framework I ever discovered
           </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
           <span style={{ color: CODE_COLORS.yellow }}>)</span>
-        </div>
-      </SkillsDescription>
-    ),
-  },
-  {
-    name: "VS Code",
-    image: "/imgs/technologies/vscode.svg",
-    codeSnippetContent: (
-      <SkillsDescription>
-        <div>
-          <span style={{ color: CODE_COLORS.purple }}>&#123;</span>
-        </div>
-        <div>
-          <span style={{ color: CODE_COLORS.white }}>message</span>
-          <span style={{ color: CODE_COLORS.cyan }}>: </span>
-          <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
-          <span style={{ color: CODE_COLORS.green }}>
-            I know this editor by heart - multiple cursors or Emmet isn&apos;t a
-            problem for me!
-          </span>
-          <span style={{ color: CODE_COLORS.cyan }}>&quot;</span>
-        </div>
-        <div>
-          <span style={{ color: CODE_COLORS.purple }}>&#125;</span>
         </div>
       </SkillsDescription>
     ),
@@ -245,8 +242,8 @@ export const SKILLS: Skill[] = [
           <span style={{ color: CODE_COLORS.white }}>echo </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
           <span style={{ color: CODE_COLORS.green }}>
-            Used for deploying the projects on Raspberry Pi at my house. I use
-            Arch btw
+            Used for deploying the projects on Raspberry Pi or Thin clients at
+            home. I use Arch btw (just kidding)
           </span>
           <span style={{ color: CODE_COLORS.green }}>&quot;</span>
         </div>
