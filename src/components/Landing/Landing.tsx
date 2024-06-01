@@ -90,7 +90,7 @@ export default function Landing() {
   return (
     <>
       <div
-        className="min-h-screen w-full bg-opacity-10 transition-all duration-500"
+        className="min-h-screen min-w-full bg-opacity-10 transition-all duration-500"
         style={{
           backgroundColor: currentColorDark,
         }}
@@ -98,12 +98,12 @@ export default function Landing() {
         <FancyBackground />
         <div className="my-24 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-around">
           <motion.div
-            className="m-16 mt-0 flex flex-col gap-4 whitespace-pre"
+            className="m-16 mt-0 min-h-[calc(100vh-250px)] min-w-screen select-none px-2 flex flex-col gap-4 whitespace-pre"
             initial={{ translateY: -200, opacity: 0 }}
             whileInView={{ translateY: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <span className="text-[100px] lg:text-[200px] font-extrabold flex flex-col">
+            <span className="text-[80px] lg:text-[200px] font-extrabold flex flex-col">
               <span className="text-6xl">I&apos;m</span>
               <span
                 className="text-transparent bg-clip-text transition-all cursor-pointer"
@@ -119,14 +119,14 @@ export default function Landing() {
               </span>
             </span>
             <div className="flex flex-col gap-4 mb-6">
-              <div className="text-4xl lg:text-6xl font-bold">
+              <div className="text-4xl lg:text-6xl font-bold w-52 lg:w-[800px]">
                 <AnimatedTyping words={ROLES} cursorColor={currentColor} />
               </div>
               <span className="text-2xl lg:text-4xl font">
                 that fell in ❤️ with
               </span>
               <span
-                className="text-5xl lg:text-7xl font-bold"
+                className="text-4xl lg:text-7xl font-bold"
                 style={{
                   color: currentColor,
                 }}
@@ -138,7 +138,7 @@ export default function Landing() {
               </span>
             </div>
             <a
-              className="m-3 lg:w-96 h-32 rounded-3xl text-4xl lg:text-5xl font-extrabold uppercase transition-all hover:-translate-y-2 text-center flex items-center justify-center cursor-pointer hover:border-4 hover:!bg-transparent hover:!text-white"
+              className="m-3 mt-auto lg:w-96 w-60 max-w-[100vw] p-3 h-32 rounded-3xl text-4xl lg:text-5xl text-wrap font-extrabold uppercase transition-all hover:-translate-y-2 text-center flex items-center justify-center cursor-pointer hover:border-4 hover:!bg-transparent hover:!text-white"
               style={{
                 color: currentColorDark,
                 backgroundColor: currentColor,

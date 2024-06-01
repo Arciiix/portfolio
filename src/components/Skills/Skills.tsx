@@ -48,7 +48,7 @@ export default function Skills() {
       <span className="text-teal-100 text-lg">
         Those Make Dreams Reality. ✨
       </span>
-      <span className="text-4xl lg:text-7xl font-bold text-teal-400">
+      <span className="text-4xl lg:text-7xl font-bold text-teal-400 text-wrap max-w-[100vw] m-auto">
         Skills & technologies
       </span>
       <div className="m-8">

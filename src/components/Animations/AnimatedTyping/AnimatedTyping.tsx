@@ -51,14 +51,16 @@ export default function AnimatedTyping({
 
   return (
     <div>
-      <span>{displayedText}</span>
-      <span
-        className="transition-all delay-300 animate-blink font-bold"
-        style={{
-          color: cursorColor,
-        }}
-      >
-        |
+      <span className="break-words text-wrap">
+        {displayedText}{" "}
+        <span
+          className="transition-all delay-300 animate-blink font-bold"
+          style={{
+            color: cursorColor,
+          }}
+        >
+          |
+        </span>
       </span>
     </div>
   );

@@ -1,3 +1,6 @@
+.letter {
+  user-select: none;
+}
 .letter::after {
   position: relative;
   display: inline-block;
