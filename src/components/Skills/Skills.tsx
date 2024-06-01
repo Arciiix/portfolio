@@ -57,7 +57,7 @@ export default function Skills() {
         title="Skills"
         className="text-4xl lg:text-7xl font-bold text-teal-400 text-wrap max-w-[100vw] m-auto"
         allowedToShow={!animationPlaying}
-      ></AnimatedUnderlineTitle>
+      />
       <div className="m-8">
         <span className="text-xl p-3 m-3 max-w-5xl mb-5 block mx-auto">
           Since my most beloved fields of programming are{" "}

@@ -22,7 +22,7 @@ export default function AboutMe() {
     >
       <AnimatedUnderlineTitle
         title="About me"
-        className="text-center m-auto"
+        className="text-center m-auto mb-4"
         allowedToShow={!animationPlaying}
       />
       <div className="flex flex-col lg:flex-row items-center gap-6">

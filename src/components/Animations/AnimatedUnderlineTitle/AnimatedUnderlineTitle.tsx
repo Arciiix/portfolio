@@ -39,7 +39,7 @@ export default function AnimatedUnderlineTitle({
   return (
     <span
       ref={(r) => (ref.current = r)}
-      className={`text-teal-400 my-4 font-bold text-7xl ${className ?? ""}`}
+      className={`text-teal-400 font-bold text-6xl ${className ?? ""}`}
     >
       {title}
     </span>
