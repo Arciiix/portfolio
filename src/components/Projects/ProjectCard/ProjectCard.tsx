@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Fields project={project} />
         <div className="flex flex-col lg:flex-row gap-5">
           <Image
-            className="w-28 h-28 rounded-xl p-1 shrink-0 group-hover:border-opacity-10 border-opacity-0 border-[0.5px] border-white"
+            className="w-28 h-28 rounded-xl p-1 shrink-0 group-hover:drop-shadow-xl shadow-white border-opacity-0 border-[0.5px] border-white"
             src={project.logoSrc}
             alt={project.name}
             width={128}
