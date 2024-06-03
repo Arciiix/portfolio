@@ -24,7 +24,7 @@ export default function AboutMe() {
         className="text-center m-auto mb-4"
         allowedToShow={!animationPlaying}
       />
-      <div className="h-[80vh] my-5">
+      <div className="h-[800px] lg:h-[80vh] my-5">
         <ReactTerminal
           commands={aboutMeCommands}
           welcomeMessage={welcomeMessage}
