@@ -1,5 +1,3 @@
-import { useMemo } from "react";
-import { adjustColor } from "@/utils/color";
 import { Project } from "../Project";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +10,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${project.id}`}>
+    <Link href={`/projects/${project.id}`} target="_blank">
       <div className="group flex flex-col gap-3 max-w-xl hover:cursor-pointer transition-all hover:bg-white hover:bg-opacity-5 p-7 rounded-2xl border-[0.5px] border-white border-opacity-0 hover:border-opacity-5 hover:-translate-y-2">
         <Fields project={project} />
         <div className="flex flex-col lg:flex-row gap-5">

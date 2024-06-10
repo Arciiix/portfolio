@@ -100,7 +100,7 @@ export const aboutMeCommands = {
             Jakub Moczoł
           </Link>{" "}
           with our project{" "}
-          <Link href="/projects/seeable">
+          <Link href="/projects/seeable" target="_blank">
             Seeable (which you can read about more in detail below or by
             clicking me).
           </Link>
@@ -132,7 +132,7 @@ export const aboutMeCommands = {
             Robert Zarzecki
           </Link>{" "}
           with our project{" "}
-          <Link href="/projects/ruchWahadlowy">
+          <Link href="/projects/ruchWahadlowy" target="_blank">
             Ruch Wahadłowy (which you can read about more in detail below or by
             clicking me).
           </Link>
@@ -148,7 +148,7 @@ export const aboutMeCommands = {
             fridge data
           </Link>
           .
-          <Link href="/projects/coldtime">
+          <Link href="/projects/coldtime" target="_blank">
             You can see what I&apos;ve built below.
           </Link>
         </li>
@@ -166,8 +166,15 @@ export const aboutMeCommands = {
           >
             E-NNOVATE International Innovation & Invention Summit 2024
           </Link>
-          . With the projects <Link href="/projects/seeable">Seeable</Link> and{" "}
-          <Link href="/projects/ruchWahadlowy">Ruch Wahadłowy</Link>.
+          . With the projects{" "}
+          <Link href="/projects/seeable" target="_blank">
+            Seeable
+          </Link>{" "}
+          and{" "}
+          <Link href="/projects/ruchWahadlowy" target="_blank">
+            Ruch Wahadłowy
+          </Link>
+          .
         </li>
       </ul>
     </span>
@@ -214,13 +221,13 @@ export const aboutMeCommands = {
       take part in it thanks to{" "}
       <b>winning a regional programming competition</b>, which resulted in
       creating{" "}
-      <Link href="/projects/coldtime">
+      <Link href="/projects/coldtime" target="_blank">
         <b>Coldtime</b>
       </Link>
       , one of my projects you can see below. I took the second internship as a
       part of my course at school. During both the internships, I was
       responsible for creating{" "}
-      <Link href="/projects/enmet">
+      <Link href="/projects/enmet" target="_blank">
         <b>Enmet</b>
       </Link>
       .
