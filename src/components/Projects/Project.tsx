@@ -27,6 +27,28 @@ export interface BasicProjectDisplayProps {
 // TODO: Actual projects
 export const PROJECTS: Project[] = [
   {
+    id: "seeable",
+    name: "Seeable",
+    description: (
+      <span>
+        <b>An ultimate navigation companion!</b> Perfect for wheelchair users
+        with visual impairments, Seeable uses advanced tech to detect obstacles
+        and guide you through the intricacies of the everyday reality. Navigate
+        mapped areas or unknown spaces with ease, indoors or outdoors - with a
+        feel of having an <b>unwavering friend by your side</b>. Seeable helps
+        you <b>explore the world confidently, one obstacle at a time!</b>
+      </span>
+    ),
+    logoSrc: "/imgs/projects/seeable/logo.png",
+    tag: {
+      label: "INNOVATE",
+      color: "#f9c00d",
+    },
+    technologies: ["Python", "C++", "Flutter", "Docker"],
+    fields: ["Engineering", "Innovation", "Accessibility"],
+    language: "Polish (English soon)",
+  },
+  {
     id: "handy",
     name: "Handy",
     description: (
@@ -93,7 +115,7 @@ export const PROJECTS: Project[] = [
     logoSrc: "/imgs/projects/ruchWahadlowy/logo.png",
     tag: {
       label: "CHANGE",
-      color: "#f9c00d",
+      color: "#e74646",
     },
     technologies: ["OpenCV", "Python", "Node.js", "Flutter", "Arduino"],
     fields: ["Automation", "Innovation", "Engineering", "AI"],
@@ -263,7 +285,7 @@ export const PROJECTS: Project[] = [
     githubURL: "https://github.com/Arciiix/portfolio",
     demoURL: "/",
     tag: {
-      label: "PRESENT",
+      label: "DESIGN",
       color: "#ffffff",
     },
     technologies: ["Next.js", "React", "Tailwind CSS"],
