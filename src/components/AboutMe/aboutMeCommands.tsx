@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Experience from "./Experience";
 
 const availableCommands: Map<keyof typeof aboutMeCommands | string, string> =
   new Map([
@@ -106,13 +107,13 @@ export const aboutMeCommands = {
           </Link>
         </li>
         <li>
-          <b>Finalist</b> in the{" "}
+          <b>Finalist and laureate</b> of the{" "}
           <Link
             href="https://2024.explory.pl/products/u09lfqp1s3u6wq8?activeProduct=d9aa9932-371d-41ee-bb5a-b9376c4a8856"
             target="_blank"
             rel="noopener noreferrer"
           >
-            E(x)plory Science Contest
+            E(x)plory Science Contest 2024
           </Link>
           , a nationwide scientific projects showcase. We made it together with
           my friends{" "}
@@ -135,7 +136,8 @@ export const aboutMeCommands = {
           <Link href="/projects/ruchWahadlowy" target="_blank">
             Ruch Wahadłowy (which you can read about more in detail below or by
             clicking me).
-          </Link>
+          </Link>{" "}
+          We won the special award from DPD Poland.
         </li>
         <li>
           <b>1st place</b> in the{" "}
@@ -147,9 +149,9 @@ export const aboutMeCommands = {
             POL-EKO competition for creating an app to manage their SMART PRO
             fridge data
           </Link>
-          .
+          .{" "}
           <Link href="/projects/coldtime" target="_blank">
-            You can see what I&apos;ve built below.
+            You can see what I&apos;ve built by clicking here.
           </Link>
         </li>
         <li>
@@ -208,30 +210,104 @@ export const aboutMeCommands = {
     </span>
   ),
   experience: (
-    <span>
-      Already gained experience during two internships at{" "}
-      <Link
-        href="https://www.pol-eko.com.pl/en/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <b>POL-EKO</b>
-      </Link>
-      , delivering top-notch IT solutions for their equipment. I was able to
-      take part in it thanks to{" "}
-      <b>winning a regional programming competition</b>, which resulted in
-      creating{" "}
-      <Link href="/projects/coldtime" target="_blank">
-        <b>Coldtime</b>
-      </Link>
-      , one of my projects you can see below. I took the second internship as a
-      part of my course at school. During both the internships, I was
-      responsible for creating{" "}
-      <Link href="/projects/enmet" target="_blank">
-        <b>Enmet</b>
-      </Link>
-      .
-    </span>
+    <div className="relative border-l border-teal-400 ml-4">
+      <Experience
+        title={
+          <span>
+            Intern Full-Stack Developer @{" "}
+            <Link
+              href="https://www.sharpai.dev/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>SharpAI</b>
+            </Link>
+          </span>
+        }
+        dates="November 2024 - December 2024"
+        description={
+          <>
+            <div>
+              I worked collaboratively as part of a dedicated team on AIkieter,
+              an AI-powered survey platform enhancing UX with smart summaries,
+              intelligent follow-up questions, and actionable insights for
+              seamless data collection. My role involved not only contributing
+              to the development of the platform but also actively engaging in
+              team collaboration, such as reviewing peers&apos; pull requests,
+              sharing constructive feedback, and ensuring code quality and
+              consistency across the project.
+            </div>
+            <b>
+              ASP.NET Core (C#) | Azure DevOps | Stripe | React | TypeScript |
+              TailwindCSS | OpenAI API | Git
+            </b>
+          </>
+        }
+      />
+      <Experience
+        title={
+          <span>
+            Intern Back-End Developer @{" "}
+            <Link
+              href="https://www.pol-eko.com.pl/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>POL-EKO</b>
+            </Link>
+          </span>
+        }
+        dates="November 2023"
+        description={
+          <>
+            <div>
+              I was responsible for migrating the back-end of{" "}
+              <Link href="/projects/enmet" target="_blank">
+                <b>Enmet</b>
+              </Link>{" "}
+              (project made during my previous internship) to ASP.NET Core, to
+              match the company&apos;s tech stack. I was also responsible for
+              deployment, advanced data aggregation, and a caching system.
+            </div>
+            <b>ASP.NET Core (C#) | Docker | Redis | PostgreSQL | Git</b>
+          </>
+        }
+      />
+      <Experience
+        title={
+          <span>
+            Intern Full-Stack Developer @{" "}
+            <Link
+              href="https://www.pol-eko.com.pl/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>POL-EKO</b>
+            </Link>
+          </span>
+        }
+        dates="July 2023"
+        description={
+          <>
+            <div>
+              I was able to take part in it thanks to{" "}
+              <b>winning a regional programming competition</b>, which resulted
+              in creating{" "}
+              <Link href="/projects/coldtime" target="_blank">
+                <b>Coldtime</b>
+              </Link>
+              , one of my projects you can see below. During the internship, I
+              was responsible for creating{" "}
+              <Link href="/projects/enmet" target="_blank">
+                <b>Enmet</b>
+              </Link>
+              .
+            </div>
+            <b>React | TypeScript | NestJS (Node.js) | PostgreSQL | Git</b>
+          </>
+        }
+      />
+    </div>
   ),
   qualities: (
     <div className="flex w-full items-center gap-4 flex-wrap justify-center">
