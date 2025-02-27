@@ -1,10 +1,15 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import SocialLink from "./SocialLink";
 
-export default function Socials() {
+type SocialsProps = {
+  noGithub?: boolean;
+};
+export default function Socials({ noGithub }: SocialsProps) {
   return (
     <div className="flex gap-2">
-      <SocialLink Icon={FaGithub} href={"https://github.com/Arciiix"} />
+      {!noGithub && (
+        <SocialLink Icon={FaGithub} href={"https://github.com/Arciiix"} />
+      )}
       <SocialLink
         Icon={FaLinkedin}
         href={"https://www.linkedin.com/in/arciiix/"}
