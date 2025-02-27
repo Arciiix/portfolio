@@ -122,6 +122,25 @@ export const PROJECTS: Project[] = [
     language: "every single one!",
   },
   {
+    id: "aikieter",
+    name: "AIkieter",
+    description: (
+      <span>
+        AI-powered survey platform leveraging NLP for conversational data
+        collection with actionable analytics dashboards - UX with smart
+        summaries, intelligent follow-up questions, and insights for seamless
+        data analysis.
+      </span>
+    ),
+    logoSrc: "/imgs/projects/aikieter/logo.svg",
+    tag: {
+      label: "ANALYZE",
+      color: "#b572ed",
+    },
+    technologies: [".NET 8", "React", "TypeScript", "Stripe", "Azure"],
+    fields: ["Data anaylsis", "NLP", "Corporate apps"],
+  },
+  {
     id: "monity",
     name: "Monity",
     description: (
@@ -143,7 +162,7 @@ export const PROJECTS: Project[] = [
       "Prisma",
       "PostgreSQL",
     ],
-    fields: ["Finance", "Data analysis", "Monitoring", "Corporate apps"],
+    fields: ["Finance", "Data analysis", "Monitoring"],
     language: "English",
   },
   {
@@ -249,7 +268,7 @@ export const PROJECTS: Project[] = [
       label: "HELP",
       color: "#8dffcb",
     },
-    technologies: ["React + TypeScript", "Chakra UI", "Firebase"],
+    technologies: ["React", "TypeScript", "Chakra UI", "Firebase"],
     fields: ["Front-end", "Teamwork", "Project managment"],
     githubURL: "https://github.com/HelpNowOfficialProject/HelpNow",
     demoURL: "https://helpnow.netlify.app/",
@@ -274,7 +293,6 @@ export const PROJECTS: Project[] = [
     fields: ["Scraping", "Integration", "Tools"],
     language: "English",
   },
-
   {
     id: "portfolio",
     name: "Portfolio",

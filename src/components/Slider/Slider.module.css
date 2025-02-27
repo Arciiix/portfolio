@@ -1,4 +1,8 @@
 .slider img {
   object-fit: contain !important;
   aspect-ratio: 1 / 1;
+  background-color: transparent;
+}
+.slider div:has(> img) {
+  background-color: transparent;
 }
