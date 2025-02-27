@@ -63,10 +63,10 @@ export default function RootLayout({
           <input name="email" />
           <input name="message" />
         </form>
-        <GlobalWrapper>
-          <UnderConstruction />
-          {/* {children} */}
-        </GlobalWrapper>
+        <UnderConstruction />
+        {/* <GlobalWrapper>
+          {children}
+        </GlobalWrapper> */}
       </body>
     </html>
   );
