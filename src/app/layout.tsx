@@ -2,6 +2,7 @@ import GlobalWrapper from "@/components/GlobalWrapper/GlobalWrapper";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import UnderConstruction from "@/components/UnderConstruction/UnderConstruction";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,7 +63,10 @@ export default function RootLayout({
           <input name="email" />
           <input name="message" />
         </form>
-        <GlobalWrapper>{children}</GlobalWrapper>
+        <GlobalWrapper>
+          <UnderConstruction />
+          {/* {children} */}
+        </GlobalWrapper>
       </body>
     </html>
   );
