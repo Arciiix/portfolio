@@ -178,6 +178,25 @@ export const aboutMeCommands = {
           </Link>
           .
         </li>
+        <li>
+          <b>
+            gold medal at{" "}
+            <Link
+              href="https://ipitex.nrct.go.th/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              IPITEx 2025
+            </Link>
+          </b>{" "}
+          (Bangkok International Intellectual Property, Invention, Innovation
+          and Technology Exposition), awarded by the{" "}
+          <b>National Research Council of Thailand</b>. With the project{" "}
+          <Link href="/projects/seeable" target="_blank">
+            Seeable
+          </Link>
+          .
+        </li>
       </ul>
     </span>
   ),
