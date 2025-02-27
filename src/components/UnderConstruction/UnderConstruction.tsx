@@ -19,7 +19,7 @@ export default function UnderConstruction() {
         >
           Artur Nowak
         </motion.h1>
-        <Socials noGithub />
+        <Socials />
         <motion.h1
           className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
           initial={{ y: -20, opacity: 0 }}
