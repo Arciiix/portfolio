@@ -4,9 +4,6 @@ import { PROJECTS } from "@/components/Projects/Project";
 import ProjectDescription from "@/components/Projects/ProjectDescription/ProjectDescription";
 import Slider from "@/components/Slider/Slider";
 import YouTubeEmbed from "@/components/YouTubeEmbed/YouTubeEmbed";
-import Image from "next/image";
-import Link from "next/link";
-import { FaCartPlus } from "react-icons/fa";
 
 const project = PROJECTS.find((e) => e.id === "flify")!;
 

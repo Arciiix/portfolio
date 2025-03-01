@@ -21,7 +21,7 @@ export default function FancyBackground() {
   const isSmallScreen = window.innerWidth < 640;
 
   const shapesArray = useMemo(() => {
-    return Array.from({ length: isSmallScreen ? 10 : 50 }).map((_, i) => ({
+    return Array.from({ length: isSmallScreen ? 10 : 50 }).map(() => ({
       shape: getRandomItem(shapes),
       position: {
         top: getRandomItem(positions),

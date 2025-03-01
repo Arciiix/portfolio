@@ -1,6 +1,4 @@
-import FancyBackground from "@/components/Animations/FancyBackground/FancyBackground";
 import ColorfulBackground from "@/components/ColorfulBackground/ColorfulBackground";
-import { useEffect } from "react";
 
 export default function ProjectsLayout({
   children,

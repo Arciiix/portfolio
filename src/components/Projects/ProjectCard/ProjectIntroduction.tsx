@@ -58,9 +58,12 @@ export default function ProjectIntroduction({
       counter++;
     }, 100);
 
-    let animationTimeout = setTimeout(() => {
-      clearInterval(animationInterval);
-    }, 100 * maxLength + 1000);
+    let animationTimeout = setTimeout(
+      () => {
+        clearInterval(animationInterval);
+      },
+      100 * maxLength + 1000
+    );
 
     return () => {
       clearInterval(animationInterval);

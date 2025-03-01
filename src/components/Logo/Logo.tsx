@@ -1,5 +1,5 @@
 "use client";
-import { AnimationProps, Transition, motion } from "framer-motion";
+import { Transition, motion } from "framer-motion";
 
 interface LogoProps {
   withoutFill?: boolean;

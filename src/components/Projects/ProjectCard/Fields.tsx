@@ -1,6 +1,6 @@
-import { useMemo } from "react";
-import { BasicProjectDisplayProps, Project } from "../Project";
 import { adjustColor } from "@/utils/color";
+import { useMemo } from "react";
+import { BasicProjectDisplayProps } from "../Project";
 
 export default function Fields({ project }: BasicProjectDisplayProps) {
   const tagDarkerColor = useMemo(() => {

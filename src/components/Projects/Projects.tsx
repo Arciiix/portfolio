@@ -1,8 +1,8 @@
-import { useMemo, useRef } from "react";
+import { useMemo } from "react";
+import ColorfulBackground from "../ColorfulBackground/ColorfulBackground";
+import { PROJECTS } from "./Project";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import ProjectsHeader from "./ProjectsHeader/ProjectsHeader";
-import { PROJECTS } from "./Project";
-import ColorfulBackground from "../ColorfulBackground/ColorfulBackground";
 
 export default function Projects() {
   const projects = useMemo(() => {

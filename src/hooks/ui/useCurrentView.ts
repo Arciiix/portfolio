@@ -11,7 +11,6 @@ export default function useCurrentView(
   const inView = useInView(ref);
 
   useEffect(() => {
-    console.log(view, inView);
     if (inView) {
       setCurrentView(view);
     }
@@ -21,10 +20,8 @@ export default function useCurrentView(
     //   // If the current page is not in view anymore and the value is still old, change it to other
     //   setCurrentView("other");
     // }
-    return () => {
-      console.log("unmount", view);
-    };
-  }, [inView]);
+    return () => {};
+  }, [inView, setCurrentView, view]);
 
   return { currentView };
 }

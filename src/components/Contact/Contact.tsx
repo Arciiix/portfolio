@@ -1,10 +1,13 @@
 "use client";
-import Lottie from "lottie-react";
 import { useState } from "react";
 import Input from "../Input/Input";
 import TextArea from "../Input/TextArea";
 import Socials from "../Socials/Socials";
-import contactAnimation from "./contactAnimation.json";
+import dynamic from "next/dynamic";
+
+const FlyingContact = dynamic(() => import("./FlyingContact"), {
+  ssr: false,
+});
 
 interface ContactErrors {
   name: string | null;
@@ -103,11 +106,7 @@ export default function Contact() {
 
   return (
     <div className="flex p-3 m-4 flex-col lg:flex-row">
-      <Lottie
-        className="flex-1 mx-auto lg:mx-0 w-[50vw] lg:w-auto"
-        animationData={contactAnimation}
-        loop={true}
-      />
+      <FlyingContact />
       <form
         className="flex-1 flex flex-col gap-8"
         data-netlify="true"
@@ -151,8 +150,8 @@ export default function Contact() {
           {sendingStatus === "sending"
             ? "sending..."
             : sendingStatus === "sent"
-            ? "thank you!"
-            : "send"}
+              ? "thank you!"
+              : "send"}
         </button>
         <div className="flex flex-col items-center gap-3">
           <span className="text-teal-100">or reach me on</span>

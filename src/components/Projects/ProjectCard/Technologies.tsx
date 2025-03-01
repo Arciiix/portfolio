@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { BasicProjectDisplayProps, Project } from "../Project";
+import { BasicProjectDisplayProps } from "../Project";
 
 type TechnologiesProps = BasicProjectDisplayProps & {
   center?: boolean; // Justify the technologies to center

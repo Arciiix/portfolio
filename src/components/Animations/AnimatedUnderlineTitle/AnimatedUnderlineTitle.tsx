@@ -34,6 +34,7 @@ export default function AnimatedUnderlineTitle({
         setAnnotation(null);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView, allowedToShow]);
 
   return (

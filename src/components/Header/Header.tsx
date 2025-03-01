@@ -9,29 +9,27 @@ import useWindowDimensions from "@/hooks/ui/useWindowDimensions";
 import { BREAKPOINTS_LG } from "@/utils/size";
 import Link from "next/link";
 
-export const NAVIGATION_ITEMS = [
-  {
-    name: "intro",
+export const NAVIGATION_ITEMS: Record<
+  string,
+  { displayName: string; special?: boolean }
+> = {
+  intro: {
     displayName: "Intro",
   },
-  {
-    name: "aboutMe",
+  aboutMe: {
     displayName: "About me",
   },
-  {
-    name: "projects",
+  projects: {
     displayName: "Projects",
     special: true,
   },
-  {
-    name: "showcase",
+  showcase: {
     displayName: "Showcase",
   },
-  {
-    name: "contact",
+  contact: {
     displayName: "Contact",
   },
-];
+};
 
 export default function Header() {
   const currentView = useRecoilValue(currentViewAtom);
@@ -42,19 +40,19 @@ export default function Header() {
   const onNavigationToggle = () => setIsNavigationOpen((prev) => !prev);
 
   const navigationItems = useMemo(() => {
-    return NAVIGATION_ITEMS.map((e) => (
-      <div key={e.name} className="group flex flex-col mx-2 cursor-pointer">
+    return Object.entries(NAVIGATION_ITEMS).map(([key, value]) => (
+      <div key={key} className="group flex flex-col mx-2 cursor-pointer">
         <a
-          data-to-scrollspy-id={e.name}
-          href={`/#${e.name}`}
+          data-to-scrollspy-id={key}
+          href={`/#${key}`}
           className={`transition-all text-xl group-hover:text-teal-400 group-hover:font-bold text-opacity-70 ${
-            e.special
+            value.special
               ? "font-bold bg-gradient-to-r  from-green-200 to-blue-300 bg-clip-text text-transparent"
               : "text-white"
           }
           `}
         >
-          {e.displayName}
+          {value.displayName}
         </a>
         <span
           className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-teal-400`}

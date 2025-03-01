@@ -5,7 +5,7 @@ import Header from "@/components/Header/Header";
 import SplashScreen from "@/pages/Loading/SplashScreen";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { ReactNode, cache, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { RecoilRoot } from "recoil";
 import { FRAME_FILENAMES } from "../TechnologiesVideo/TechnologiesVideo";
 
@@ -18,7 +18,6 @@ let alreadyCachedImages = false;
 const cacheImages = async () => {
   if (alreadyCachedImages) return;
   alreadyCachedImages = true;
-  console.log("Cache images");
 
   const promises = await FRAME_FILENAMES.map((src) => {
     return new Promise((resolve, reject) => {
@@ -29,8 +28,6 @@ const cacheImages = async () => {
     });
   });
   await Promise.all(promises);
-
-  console.log("Images cached");
 };
 
 export default function GlobalWrapper({ children }: GlobalWrapperProps) {

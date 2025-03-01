@@ -1,13 +1,15 @@
 "use client";
 
-import FAQSection from "@/components/FAQSection/FAQSection";
 import { PROJECTS } from "@/components/Projects/Project";
 import ProjectDescription from "@/components/Projects/ProjectDescription/ProjectDescription";
 import Slider from "@/components/Slider/Slider";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
 
-import DarkModeToggle from "react-dark-mode-toggle";
+const DarkModeToggle = dynamic(() => import("react-dark-mode-toggle"), {
+  ssr: false,
+});
 
 const project = PROJECTS.find((e) => e.id === "lightController")!;
 

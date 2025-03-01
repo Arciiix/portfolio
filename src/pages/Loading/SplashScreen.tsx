@@ -1,5 +1,4 @@
 import Logo from "@/components/Logo/Logo";
-import Loading from "./Loading";
 
 export default function SplashScreen() {
   return (

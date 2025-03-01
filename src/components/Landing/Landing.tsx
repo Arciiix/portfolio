@@ -47,19 +47,22 @@ const FELL_IN_LOVE_TEXTS: AnimatedText[] = [
 ];
 
 import { adjustColor } from "@/utils/color";
-import { useEffect, useMemo, useRef, useState } from "react";
-import AnimatedDeveloper from "../Animations/AnimatedDeveloper/AnimatedDeveloper";
+import { useEffect, useMemo, useState } from "react";
 import FancyBackground from "../Animations/FancyBackground/FancyBackground";
 
-import useCurrentView from "@/hooks/ui/useCurrentView";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import AnimatedTexts, {
   AnimatedText,
 } from "../Animations/AnimatedTexts/AnimatedTexts";
 import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
 import Socials from "../Socials/Socials";
 import styles from "./Landing.module.css";
+import dynamic from "next/dynamic";
+
+const AnimatedDeveloper = dynamic(
+  () => import("../Animations/AnimatedDeveloper/AnimatedDeveloper"),
+  { ssr: false }
+);
 
 export default function Landing() {
   const [currentFellInLoveIndex, setCurrentFellInLoveIndex] = useState(0);
