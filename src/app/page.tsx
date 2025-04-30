@@ -10,6 +10,7 @@ import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
 import ScrollSpy from "react-ui-scrollspy";
 import Landing from "@/components/Landing/Landing";
 import Contact from "@/components/Contact/Contact";
+import CypressCheck from "@/components/CypressCheck/CypressCheck";
 
 const TechnologiesVideo = dynamic(
   () => import("@/components/TechnologiesVideo/TechnologiesVideo"),
@@ -61,6 +62,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between m-0 p-0">
       <Landing />
+
+      <CypressCheck />
 
       <ScrollSpy
         onUpdateCallback={(id: string) => {
