@@ -1,4 +1,5 @@
 import { InputProps } from "./Input";
+import { cn } from "@/lib/utils";
 
 type TextAreaProps = InputProps;
 
@@ -10,35 +11,33 @@ export default function TextArea({
   error,
 }: TextAreaProps) {
   return (
-    <div className="relative w-full min-w-[200px]">
-      <textarea
-        className={`peer ${
-          error ? "text-red-400 border-red-500" : ""
-        } h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 ${
-          error ? "focus:border-red-500" : "focus:border-teal-500"
-        } focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50`}
-        placeholder={" "}
-        onChange={(e) => onChange(e.target.value)}
-        value={value}
-        rows={8}
-        name={name}
-      />
+    <div className="w-full">
       <label
-        className={`${
-          error ? "text-red-400" : ""
-        } after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 ${
-          error ? "after:border-red-500" : "after:border-teal-500"
-        } after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight ${
-          error ? "peer-focus:text-red-500" : "peer-focus:text-teal-500"
-        } peer-focus:after:scale-x-100 ${
-          error
-            ? "peer-focus:after:border-red-500"
-            : "peer-focus:after:border-teal-500"
-        } peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500`}
+        htmlFor={name}
+        className={cn(
+          "mb-2 block text-sm font-medium",
+          error ? "text-red-400" : "text-white/80"
+        )}
       >
         {label}
       </label>
-      <span className="text-red-400">{error}</span>
+      <textarea
+        id={name}
+        rows={5}
+        name={name}
+        value={value}
+        placeholder=" "
+        onChange={(e) => onChange(e.target.value)}
+        className={cn(
+          "w-full resize-y rounded-xl border bg-white/[0.07] px-4 py-3.5 text-base leading-relaxed text-white outline-none transition-all duration-300",
+          error
+            ? "border-red-500/60 focus:border-red-400 focus:ring-4 focus:ring-red-400/15"
+            : "border-white/20 hover:border-white/35 focus:border-teal-400 focus:bg-white/[0.1] focus:ring-4 focus:ring-teal-400/15"
+        )}
+      />
+      <span className="mt-1.5 block min-h-[1.1rem] text-xs text-red-400">
+        {error ?? ""}
+      </span>
     </div>
   );
 }
