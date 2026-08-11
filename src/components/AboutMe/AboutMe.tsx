@@ -98,9 +98,7 @@ export default function AboutMe() {
             <ReactTerminal
               commands={aboutMeCommands}
               welcomeMessage={welcomeMessage}
-              errorMessage={
-                "Command not found, have you maybe made a typo? 🤔"
-              }
+              errorMessage={"Command not found, have you maybe made a typo? 🤔"}
               showControlBar={false}
               showControlButtons={false}
               prompt="➜"

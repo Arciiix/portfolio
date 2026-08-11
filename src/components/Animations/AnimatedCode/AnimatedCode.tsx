@@ -79,11 +79,7 @@ const CODE: Line[] = [
     { text: ".isCoding", color: SYNTAX.func },
     { text: "()) {" },
   ],
-  [
-    { text: "  artur" },
-    { text: ".build", color: SYNTAX.func },
-    { text: "({" },
-  ],
+  [{ text: "  artur" }, { text: ".build", color: SYNTAX.func }, { text: "({" }],
   [
     { text: "    fun", color: SYNTAX.prop },
     { text: ": " },
@@ -159,10 +155,10 @@ export default function AnimatedCode({ accentColor }: AnimatedCodeProps) {
     () =>
       prefersReducedMotion
         ? 0
-        : CODE[lineIndex]?.reduce(
+        : (CODE[lineIndex]?.reduce(
             (count, token) => count + token.text.length,
             0
-          ) ?? 0,
+          ) ?? 0),
     [prefersReducedMotion, lineIndex]
   );
 
@@ -203,10 +199,7 @@ export default function AnimatedCode({ accentColor }: AnimatedCodeProps) {
         }}
       >
         <div className="flex gap-4 font-mono text-[12.5px] leading-6 md:gap-6 md:text-[13.5px] md:leading-7">
-          <div
-            aria-hidden
-            className="select-none text-right text-white/20"
-          >
+          <div aria-hidden className="select-none text-right text-white/20">
             {CODE.map((_, lineNumber) => (
               <div key={lineNumber} className="tabular-nums">
                 {lineNumber + 1}
@@ -232,13 +225,12 @@ export default function AnimatedCode({ accentColor }: AnimatedCodeProps) {
                     {token.text}
                   </span>
                 ))}
-                {!prefersReducedMotion &&
-                  index === visibleLines.length - 1 && (
-                    <span
-                      className={styles.cursor}
-                      style={{ ["--cursor" as string]: accentColor }}
-                    />
-                  )}
+                {!prefersReducedMotion && index === visibleLines.length - 1 && (
+                  <span
+                    className={styles.cursor}
+                    style={{ ["--cursor" as string]: accentColor }}
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -252,9 +244,7 @@ export default function AnimatedCode({ accentColor }: AnimatedCodeProps) {
         </span>
         <span className="flex items-center gap-3">
           <span className="hidden sm:inline">UTF-8</span>
-          <span className="animate-pulse text-[#7ee787]/90">
-            ✓ No errors
-          </span>
+          <span className="animate-pulse text-[#7ee787]/90">✓ No errors</span>
         </span>
       </div>
     </div>

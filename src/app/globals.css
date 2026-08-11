@@ -65,11 +65,7 @@ body {
   background: transparent !important;
   border-radius: 0 !important;
   font-family:
-    ui-monospace,
-    "Cascadia Code",
-    "Source Code Pro",
-    Menlo,
-    monospace;
+    ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
   font-size: 0.85rem;
   line-height: 1.7;
   padding: 1.1rem 1.35rem;
@@ -100,9 +96,7 @@ body {
   background-clip: content-box;
 }
 
-[data-testid="terminal"]
-  .index_editor__JoDSg
-  .index_caretAfter__6aXPx {
+[data-testid="terminal"] .index_editor__JoDSg .index_caretAfter__6aXPx {
   width: 8px !important;
   height: 1.1em !important;
   top: 1px !important;

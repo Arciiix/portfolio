@@ -2,13 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import {
-  useLayoutEffect,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useLayoutEffect, useEffect, useMemo, useRef, useState } from "react";
 import CodeSnippet from "../CodeSnippet/CodeSnippet";
 import AnimatedUnderlineTitle from "../Animations/AnimatedUnderlineTitle/AnimatedUnderlineTitle";
 import { SKILLS, type Skill } from "./SkillsDescriptions";
@@ -213,11 +207,11 @@ export default function Skills() {
         <p className="max-w-3xl text-lg leading-relaxed text-white/70">
           Since my most beloved fields of programming are{" "}
           <b className="text-white">Full-Stack Development and IoT</b>, I use
-          programming languages designed for those purposes. Sometimes there
-          are smaller tools that are necessary for creating an entire project,
-          like a <b className="text-white">mobile app framework</b> for
-          building the &quot;control center&quot; of an IoT device. That&apos;s
-          why my technologies are diverse - and I think that&apos;s great!
+          programming languages designed for those purposes. Sometimes there are
+          smaller tools that are necessary for creating an entire project, like
+          a <b className="text-white">mobile app framework</b> for building the
+          &quot;control center&quot; of an IoT device. That&apos;s why my
+          technologies are diverse - and I think that&apos;s great!
         </p>
 
         {/* Stats */}

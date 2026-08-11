@@ -123,8 +123,12 @@ export default function Landing() {
           <div className="flex min-w-0 flex-col items-center gap-7 text-center lg:items-start lg:text-left">
             {/* Name with letter reveals */}
             <motion.div
-              initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -40 }}
-              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              initial={
+                prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -40 }
+              }
+              animate={
+                prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }
+              }
               transition={{ duration: 0.9, delay: 0.1 }}
               className="max-w-full select-none"
             >
@@ -165,8 +169,12 @@ export default function Landing() {
 
             {/* Typing effect */}
             <motion.div
-              initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
-              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              initial={
+                prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }
+              }
+              animate={
+                prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }
+              }
               transition={{ duration: 0.8, delay: 0.25 }}
               className="min-w-0 max-w-full text-3xl font-bold lg:text-5xl"
             >
@@ -175,8 +183,12 @@ export default function Landing() {
 
             {/* Rolling technologies */}
             <motion.div
-              initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
-              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              initial={
+                prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }
+              }
+              animate={
+                prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }
+              }
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col items-center gap-1.5 lg:items-start"
             >
@@ -199,8 +211,12 @@ export default function Landing() {
 
             {/* CTAs */}
             <motion.div
-              initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
-              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              initial={
+                prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }
+              }
+              animate={
+                prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }
+              }
               transition={{ duration: 0.8, delay: 0.55 }}
               className="mt-2 flex flex-col items-center gap-5 sm:flex-row"
             >
@@ -225,7 +241,9 @@ export default function Landing() {
           {/* Right column - developer code window */}
           <motion.div
             initial={
-              prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.92 }
+              prefersReducedMotion
+                ? { opacity: 0 }
+                : { opacity: 0, scale: 0.92 }
             }
             animate={
               prefersReducedMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }
@@ -234,9 +252,7 @@ export default function Landing() {
             className="relative mx-auto min-w-0 w-full max-w-full lg:max-w-lg"
           >
             <motion.div
-              animate={
-                prefersReducedMotion ? undefined : { y: [0, -12, 0] }
-              }
+              animate={prefersReducedMotion ? undefined : { y: [0, -12, 0] }}
               transition={{
                 repeat: Infinity,
                 duration: 6,

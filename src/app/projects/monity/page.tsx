@@ -21,7 +21,9 @@ export default function Monity() {
             <h2 className="text-xl font-bold">
               💼 <strong>Multiple Account Support</strong>
             </h2>
-            <p className="mt-2">Manage and monitor multiple accounts effortlessly.</p>
+            <p className="mt-2">
+              Manage and monitor multiple accounts effortlessly.
+            </p>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors duration-300 hover:border-teal-400/30">
@@ -94,8 +96,8 @@ export default function Monity() {
             </h2>
             <p className="mt-2">
               Rest easy knowing your data is secure with support for{" "}
-              <em>2FA (Two-Factor Authentication)</em>, <em>PIN authorization</em>
-              , and more.
+              <em>2FA (Two-Factor Authentication)</em>,{" "}
+              <em>PIN authorization</em>, and more.
             </p>
           </div>
         </div>

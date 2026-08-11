@@ -26,8 +26,8 @@ export default function RuchWahadlowy() {
 
       <NoticeBanner>
         I cannot share much information or show too many things about it since
-        it&apos;s a potential innovation contests runner and is a property of me,
-        my team and school. Please contact me for more information.
+        it&apos;s a potential innovation contests runner and is a property of
+        me, my team and school. Please contact me for more information.
       </NoticeBanner>
       <FAQSection title="The team">
         <div className="flex flex-col gap-1">

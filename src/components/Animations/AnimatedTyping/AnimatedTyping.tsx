@@ -27,11 +27,17 @@ export default function AnimatedTyping({
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!isDeleting && charCount < currentWord.length) {
-      timeout = setTimeout(() => setCharCount((count) => count + 1), TYPE_SPEED_MS);
+      timeout = setTimeout(
+        () => setCharCount((count) => count + 1),
+        TYPE_SPEED_MS
+      );
     } else if (!isDeleting && charCount === currentWord.length) {
       timeout = setTimeout(() => setIsDeleting(true), HOLD_DURATION_MS);
     } else if (isDeleting && charCount > 0) {
-      timeout = setTimeout(() => setCharCount((count) => count - 1), DELETE_SPEED_MS);
+      timeout = setTimeout(
+        () => setCharCount((count) => count - 1),
+        DELETE_SPEED_MS
+      );
     } else {
       setIsDeleting(false);
       setWordIndex((index) => (index + 1) % words.length);
