@@ -1,9 +1,11 @@
 import { CODE_COLORS } from "../CodeSnippet/CodeSnippet";
 
-interface Skill {
+export interface Skill {
   name: string;
   image: string;
   codeSnippetContent: JSX.Element;
+  color: string;
+  category: "Frontend" | "Backend" | "Mobile & IoT" | "Tools";
 }
 
 interface SkillsDescription {
@@ -21,6 +23,8 @@ export const SKILLS: Skill[] = [
   {
     name: "TypeScript",
     image: "/imgs/technologies/typescript.svg",
+    color: "#3178C6",
+    category: "Frontend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -43,6 +47,8 @@ export const SKILLS: Skill[] = [
   {
     name: "JavaScript",
     image: "/imgs/technologies/javascript.svg",
+    color: "#F7DF1E",
+    category: "Frontend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -64,6 +70,8 @@ export const SKILLS: Skill[] = [
   {
     name: "React",
     image: "/imgs/technologies/react.svg",
+    color: "#61DAFB",
+    category: "Frontend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -92,6 +100,8 @@ export const SKILLS: Skill[] = [
   {
     name: "CSS3",
     image: "/imgs/technologies/css.svg",
+    color: "#1572B6",
+    category: "Frontend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -117,6 +127,8 @@ export const SKILLS: Skill[] = [
   {
     name: "HTML5",
     image: "/imgs/technologies/html.svg",
+    color: "#E34F26",
+    category: "Frontend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -136,6 +148,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Node.js",
     image: "/imgs/technologies/nodejs.svg",
+    color: "#339933",
+    category: "Backend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -157,6 +171,8 @@ export const SKILLS: Skill[] = [
   {
     name: "ASP.NET (C#)",
     image: "/imgs/technologies/csharp.svg",
+    color: "#A179DC",
+    category: "Backend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -178,6 +194,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Python",
     image: "/imgs/technologies/python.svg",
+    color: "#3776AB",
+    category: "Backend",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -197,6 +215,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Arduino",
     image: "/imgs/technologies/arduino.svg",
+    color: "#00979D",
+    category: "Mobile & IoT",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -219,6 +239,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Flutter",
     image: "/imgs/technologies/flutter.svg",
+    color: "#54C5F8",
+    category: "Mobile & IoT",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -236,6 +258,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Linux",
     image: "/imgs/technologies/linux.svg",
+    color: "#FCC624",
+    category: "Tools",
     codeSnippetContent: (
       <SkillsDescription>
         <div>
@@ -253,6 +277,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Git",
     image: "/imgs/technologies/git.svg",
+    color: "#F05032",
+    category: "Tools",
     codeSnippetContent: (
       <SkillsDescription>
         <div>

@@ -11,17 +11,26 @@ export const CODE_COLORS = {
 
 interface CodeSnippetProps {
   content: JSX.Element;
+  title?: string;
 }
 
-export default function CodeSnippet({ content }: CodeSnippetProps) {
+export default function CodeSnippet({
+  content,
+  title = "skills.ts",
+}: CodeSnippetProps) {
   return (
-    <div className="top-32 z-30 bg-opacity-80 backdrop-blur-lg rounded-md min-w-[384px] w-max max-w-sm xl:max-w-lg py-3 bg-gray-900 p-4 space-y-4 relative">
-      <div className="flex justify-between items-center w-max gap-2">
-        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+    <div className="w-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#0b0f17]/85 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.05] px-4 py-3">
+        <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+        <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+        <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+        <span className="ml-3 truncate font-mono text-xs tracking-wide text-white/45">
+          {title}
+        </span>
       </div>
-      <div className="h-full overflow-y-auto">{content}</div>
+      <div className="max-h-64 overflow-y-auto px-5 py-4 text-left md:px-6 md:py-5">
+        {content}
+      </div>
     </div>
   );
 }
