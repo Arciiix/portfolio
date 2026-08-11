@@ -7,7 +7,7 @@ const project = PROJECTS.find((e) => e.id === "summid")!;
 
 export default function Summid() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
       <FAQSection title="Why?">
         <span>

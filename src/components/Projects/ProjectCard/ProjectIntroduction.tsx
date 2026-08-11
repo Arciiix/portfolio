@@ -75,21 +75,31 @@ export default function ProjectIntroduction({
     <motion.div
       initial={{ translateY: -200, opacity: 0 }}
       whileInView={{ translateY: 0, opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <div className="my-4 flex flex-col lg:flex-row justify-center items-center gap-6">
-        <Image
-          className="rounded-2xl"
-          src={project.logoSrc}
-          alt={project.name}
-          width={140}
-          height={140}
-        />
-        <h1 className="text-4xl lg:text-6xl xl:text-8xl font-bold text-center">
+      <div className="my-4 flex flex-col items-center justify-center gap-6 lg:flex-row">
+        <div className="relative shrink-0">
+          <div
+            aria-hidden
+            className="absolute -inset-5 rounded-[2rem] opacity-40 blur-2xl transition-colors duration-500"
+            style={{ background: project.tag.color }}
+          />
+          <div className="glass-panel relative overflow-hidden rounded-2xl p-3">
+            <Image
+              className="rounded-xl"
+              src={project.logoSrc}
+              alt={project.name}
+              width={140}
+              height={140}
+            />
+          </div>
+        </div>
+        <h1 className="bg-gradient-to-br from-white via-white to-teal-200 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-6xl xl:text-8xl">
           {displayedText}
         </h1>
       </div>
-      <div className="flex gap-2 justify-center my-8">
+      <div className="my-8 flex items-center justify-center gap-4">
         {project.githubURL ? (
           <SocialLink Icon={FaGithub} href={project.githubURL} />
         ) : null}

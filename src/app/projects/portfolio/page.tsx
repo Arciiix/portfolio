@@ -5,7 +5,7 @@ const project = PROJECTS.find((e) => e.id === "portfolio")!;
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
     </div>
   );

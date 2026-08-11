@@ -2,18 +2,19 @@ import FAQSection from "@/components/FAQSection/FAQSection";
 import { PROJECTS } from "@/components/Projects/Project";
 import ProjectDescription from "@/components/Projects/ProjectDescription/ProjectDescription";
 import Link from "next/link";
+import NoticeBanner from "@/components/NoticeBanner/NoticeBanner";
 
 const project = PROJECTS.find((e) => e.id === "enmet")!;
 
 export default function Enmet() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
 
-      <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold break-words max-w-full overflow-hidden">
+      <NoticeBanner>
         Since this app was created at the work, I cannot share much information
         about it!
-      </span>
+      </NoticeBanner>
       <FAQSection title="Why was this app created?">
         <span>
           I created this app during my interview at{" "}

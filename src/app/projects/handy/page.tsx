@@ -6,21 +6,29 @@ import Link from "next/link";
 
 const project = PROJECTS.find((e) => e.id === "handy")!;
 
+const FEATURE_CARD_CLASS =
+  "mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors duration-300 hover:border-teal-400/30";
+
 export default function Handy() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
 
-      <span className="mx-auto text-3xl break-words overflow-hidden max-w-full m-2 text-teal-400 font-bold text-center">
-        The video says everything! (sound needed)
-      </span>
+      <div className="flex flex-col items-center gap-3">
+        <h2 className="bg-gradient-to-r from-teal-300 to-teal-500 bg-clip-text text-center text-3xl font-bold text-transparent md:text-4xl">
+          The video says everything!
+        </h2>
+        <span className="rounded-full border border-white/10 bg-white/[0.05] px-4 py-1.5 text-sm text-white/60">
+          (sound needed)
+        </span>
+      </div>
       <YouTubeEmbed
         url={`https://www.youtube.com/embed/cpm_k6NczM4?si=6knsmMURjkhR7Y2g`}
         title="Handy"
       />
 
       <FAQSection title="Features">
-        <div className="mb-6">
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">🖐️ Gesture Recognition</h2>
           <p>
             Control your smart home devices effortlessly with various hand
@@ -34,7 +42,7 @@ export default function Handy() {
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">🏡 Home Assistant Integration</h2>
           <p>
             Handy was built to seamlessly integrate with{" "}
@@ -53,7 +61,7 @@ export default function Handy() {
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">🎵 Built-In Actions</h2>
           <p>
             The core element of Handy is music control -{" "}
@@ -66,7 +74,7 @@ export default function Handy() {
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">📱 Mobile App</h2>
           <p>
             If you need to manually control Handy without using hand gestures,
@@ -77,7 +85,7 @@ export default function Handy() {
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">⚙️ Resource Efficiency</h2>
           <p>
             Efficiently operates on <b>standard surveillance cameras 24/7</b>,
@@ -88,7 +96,7 @@ export default function Handy() {
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">🤖 Customization</h2>
           <p>
             The app can be <b>customized in every way.</b> You can even build,
@@ -100,7 +108,7 @@ export default function Handy() {
           </p>
         </div>
 
-        <div>
+        <div className={FEATURE_CARD_CLASS}>
           <h2 className="text-2xl font-bold">📈 Constant Innovation</h2>
           <p>
             Since this is a crucial part of my (and my family members&apos;)

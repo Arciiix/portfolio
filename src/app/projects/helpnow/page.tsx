@@ -8,7 +8,7 @@ const project = PROJECTS.find((e) => e.id === "helpnow")!;
 
 export default function HelpNow() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
       <FAQSection title="What is this?">
         <span>

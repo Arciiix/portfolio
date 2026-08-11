@@ -1,24 +1,20 @@
-"use client";
-
-import useWindowDimensions from "@/hooks/ui/useWindowDimensions";
-
 interface YouTubeEmbedProps {
   title: string;
   url: string;
 }
 
 export default function YouTubeEmbed({ url, title }: YouTubeEmbedProps) {
-  const { innerWidth } = useWindowDimensions();
-
   return (
-    <iframe
-      className="mx-auto"
-      width={innerWidth * 0.8 + "px"}
-      height={(innerWidth * 0.8 * 9) / 16 + "px"}
-      src={url}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      title={title}
-    />
+    <div className="glass-panel mx-auto w-full max-w-4xl overflow-hidden rounded-[1.75rem] p-2 md:p-3">
+      <div className="relative w-full overflow-hidden rounded-[1.25rem] bg-black pt-[56.25%]">
+        <iframe
+          className="absolute inset-0 h-full w-full border-0"
+          src={url}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title={title}
+        />
+      </div>
+    </div>
   );
 }

@@ -2,30 +2,33 @@ import FAQSection from "@/components/FAQSection/FAQSection";
 import { PROJECTS } from "@/components/Projects/Project";
 import ProjectDescription from "@/components/Projects/ProjectDescription/ProjectDescription";
 import YouTubeEmbed from "@/components/YouTubeEmbed/YouTubeEmbed";
+import NoticeBanner from "@/components/NoticeBanner/NoticeBanner";
 
 const project = PROJECTS.find((e) => e.id === "ruchWahadlowy")!;
 
 export default function RuchWahadlowy() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
 
-      <span className="text-center text-3xl text-teal-400 font-bold">
-        Watch the video to learn more!
-      </span>
-      <span className="text-blue-400 bg-blue-900 bg-opacity-20 p-2 font-bold rounded-2xl text-center w-max mx-auto">
-        English captions available
-      </span>
+      <div className="flex flex-col items-center gap-3">
+        <h2 className="bg-gradient-to-r from-teal-300 to-teal-500 bg-clip-text text-center text-3xl font-bold text-transparent md:text-4xl">
+          Watch the video to learn more!
+        </h2>
+        <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-1.5 text-sm font-semibold text-blue-300">
+          English captions available
+        </span>
+      </div>
       <YouTubeEmbed
         url={`https://www.youtube.com/embed/57xFxJmKs_w?si=I68Hlv8Ijn-Q7lCN`}
         title="Ruch wahadłowy"
       />
 
-      <span className="text-yellow-400 bg-yellow-900 bg-opacity-20 p-4 w-max mx-auto rounded-2xl font-bold break-words overflow-hidden max-w-full">
+      <NoticeBanner>
         I cannot share much information or show too many things about it since
-        it&apos;s a potential innovation contests runner and is a property of
-        me, my team and school. Please contact me for more information.
-      </span>
+        it&apos;s a potential innovation contests runner and is a property of me,
+        my team and school. Please contact me for more information.
+      </NoticeBanner>
       <FAQSection title="The team">
         <div className="flex flex-col gap-1">
           <span>

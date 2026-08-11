@@ -13,7 +13,7 @@ export default function Fields({ project }: BasicProjectDisplayProps) {
     return project.fields.map((e) => (
       <span
         key={e}
-        className="text-sm text-teal-400 font-semibold bg-slate-900 bg-opacity-50 p-2 rounded-xl"
+        className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-sm font-medium text-teal-200/90"
       >
         {e}
       </span>
@@ -21,12 +21,13 @@ export default function Fields({ project }: BasicProjectDisplayProps) {
   }, [project.fields]);
 
   return (
-    <div className="flex flex-col mb-3 gap-2 items-start justify-between sm:flex-row sm:items-center">
+    <div className="mb-3 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
       <span
-        className="text-lg font-semibold p-2 rounded-xl"
+        className="rounded-full px-4 py-1.5 text-base font-bold"
         style={{
           color: project.tag.color,
           backgroundColor: tagDarkerColor,
+          boxShadow: `0 0 26px -8px ${project.tag.color}`,
         }}
       >
         #{project.tag.label}

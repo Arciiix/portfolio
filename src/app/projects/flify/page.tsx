@@ -9,7 +9,7 @@ const project = PROJECTS.find((e) => e.id === "flify")!;
 
 export default function Flify() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
 
       <YouTubeEmbed
@@ -17,8 +17,8 @@ export default function Flify() {
         title="Flify"
       />
       <FAQSection title="Choose your side 👀">
-        <div className="m-4 flex gap-4 items-center mx-auto flex-col">
-          <div className="flex gap-4 items-center flex-col lg:flex-row">
+        <div className="m-4 flex flex-col items-center gap-4 mx-auto">
+          <div className="flex flex-col items-center gap-4 lg:flex-row">
             <FakeProduct
               imageSrc="/imgs/projects/flify/speaker.jpg"
               imageAlt="Speaker"
@@ -36,7 +36,9 @@ export default function Flify() {
             />
           </div>
           <div className="text-sm text-slate-400">Images via Pixabay</div>
-          <span className="text-7xl m-5 text-green-200 font-bold">OR</span>
+          <span className="bg-gradient-to-r from-green-200 to-emerald-300 bg-clip-text m-5 text-7xl font-bold text-transparent">
+            OR
+          </span>
           <div>
             <FakeProduct
               imageSrc="/imgs/projects/flify/logo.png"

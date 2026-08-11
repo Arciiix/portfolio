@@ -12,7 +12,7 @@ export default function Technologies({ project, center }: TechnologiesProps) {
     return project.technologies.map((e) => (
       <span
         key={e}
-        className="text-teal-300 font-semibold bg-teal-800 bg-opacity-50 p-2 rounded-xl"
+        className="rounded-full border border-teal-400/25 bg-teal-400/10 px-4 py-1.5 text-sm font-semibold text-teal-200"
       >
         {e}
       </span>
@@ -20,7 +20,7 @@ export default function Technologies({ project, center }: TechnologiesProps) {
   }, [project.technologies]);
   return (
     <div
-      className={`w-full flex flex-wrap gap-2 ${
+      className={`mt-6 w-full flex flex-wrap gap-2 ${
         center ? "justify-center" : ""
       }`}
     >

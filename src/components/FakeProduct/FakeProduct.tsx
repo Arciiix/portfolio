@@ -42,14 +42,14 @@ export default function FakeProduct({
   }, [alreadyClicked]);
   return (
     <article
-      className={`${
-        alreadyClicked ? (isBlue ? "bg-blue-700" : "bg-red-900 ") : ""
-      } bg-opacity-20 rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 w-max`}
+      className={`glass-panel w-max rounded-2xl p-3 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+        alreadyClicked ? (isBlue ? "bg-blue-700" : "bg-red-900") : ""
+      }`}
     >
       <button onClick={handleAlreadyClicked}>
-        <div className="relative flex items-end overflow-hidden rounded-xl justify-center">
+        <div className="relative flex items-end justify-center overflow-hidden rounded-xl">
           <Image
-            className="w-max h-20 lg:h-44 object-contain"
+            className="h-20 w-max object-contain lg:h-44"
             src={imageSrc}
             alt={imageAlt}
             height={180}
@@ -59,11 +59,11 @@ export default function FakeProduct({
 
         <div className="mt-1 p-2">
           <h2 className="text-slate-200">{title}</h2>
-          <p className="mt-1 mx-auto text-sm text-slate-400 break-words block w-48 lg:w-64 text-center">
+          <p className="mx-auto mt-1 block w-48 break-words text-center text-sm text-slate-400 lg:w-64">
             {description}
           </p>
 
-          <div className="mt-3 flex gap-2 items-center justify-center lg:items-end lg:justify-between flex-col lg:flex-row">
+          <div className="mt-3 flex flex-col items-center justify-center gap-2 lg:flex-row lg:items-end lg:justify-between">
             <p
               className={`text-lg font-bold ${
                 isBlue ? "text-blue-500" : "text-red-500"

@@ -8,7 +8,7 @@ const project = PROJECTS.find((e) => e.id === "coldtime")!;
 
 export default function Coldtime() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-8">
       <ProjectDescription project={project} />
 
       <FAQSection title="Why was this app created?">
