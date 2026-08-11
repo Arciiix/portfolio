@@ -1,53 +1,51 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
 
 interface AnimatedTypingProps {
   words: string[];
   cursorColor: string;
 }
 
+const TYPE_SPEED_MS = 90;
+const DELETE_SPEED_MS = 50;
+const HOLD_DURATION_MS = 1600;
+
 export default function AnimatedTyping({
   words,
   cursorColor,
 }: AnimatedTypingProps) {
-  const [displayedText, setDisplayedText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [charCount, setCharCount] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let currentWordIndex = 0;
-    let currentCharIndex = 0;
-    let displayedText = "";
-    let wait = false; // If the untyping animation is done
-    const timer = setInterval(async () => {
-      if (wait) return;
+    if (words.length === 0) return;
 
-      if (currentCharIndex < words[currentWordIndex].length) {
-        displayedText =
-          displayedText + words[currentWordIndex][currentCharIndex];
-        setDisplayedText(displayedText);
-        currentCharIndex++;
-      } else {
-        // Delay before untyping the word
-        wait = true;
-        setTimeout(() => {
-          const untypeTimer = setInterval(() => {
-            if (displayedText.length > 0) {
-              displayedText = displayedText.slice(0, -1); // Remove the last character
-              setDisplayedText(displayedText);
-            } else {
-              clearInterval(untypeTimer);
-              wait = false;
-              currentCharIndex = 0;
-              currentWordIndex = (currentWordIndex + 1) % words.length;
-            }
-          }, 100); // Speed at which characters are untyped (100ms per character)
-        }, 1500); // Delay for 1,5 second after displaying a word
-      }
-    }, 100); // Speed at which characters are typed (100ms per character)
+    const currentWord = words[wordIndex % words.length];
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, [words]);
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && charCount < currentWord.length) {
+      timeout = setTimeout(() => setCharCount((count) => count + 1), TYPE_SPEED_MS);
+    } else if (!isDeleting && charCount === currentWord.length) {
+      timeout = setTimeout(() => setIsDeleting(true), HOLD_DURATION_MS);
+    } else if (isDeleting && charCount > 0) {
+      timeout = setTimeout(() => setCharCount((count) => count - 1), DELETE_SPEED_MS);
+    } else {
+      setIsDeleting(false);
+      setWordIndex((index) => (index + 1) % words.length);
+      setCharCount(0);
+      return;
+    }
+
+    return () => clearTimeout(timeout);
+  }, [words, wordIndex, charCount, isDeleting]);
+
+  const displayedText = (words[wordIndex % words.length] ?? "").slice(
+    0,
+    charCount
+  );
 
   return (
     <div>

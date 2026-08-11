@@ -9,7 +9,7 @@ export default function AboutMe() {
 
   return (
     <motion.div
-      className="mt-20 w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col"
+      className="w-full p-8 bg-teal-900 bg-opacity-40 flex flex-col"
       initial={{ translateY: -200, opacity: 0 }}
       whileInView={{
         translateY: 0,

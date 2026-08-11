@@ -18,7 +18,7 @@ function getRandomDelay(min: number, max: number): string {
 }
 
 export default function FancyBackground() {
-  const isSmallScreen = window.innerWidth < 640;
+  const isSmallScreen = typeof window !== "undefined" && window.innerWidth < 640;
 
   const shapesArray = useMemo(() => {
     return Array.from({ length: isSmallScreen ? 10 : 50 }).map(() => ({

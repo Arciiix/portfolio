@@ -97,7 +97,7 @@ export default function Header() {
                 transition={{ duration: 0.25 }}
               >
                 Artur Nowak{" "}
-                <span className="text-white/35 font-normal">/ engineer</span>
+                <span className="text-white/35 font-normal">/ software engineer</span>
               </motion.span>
             ) : null}
           </AnimatePresence>

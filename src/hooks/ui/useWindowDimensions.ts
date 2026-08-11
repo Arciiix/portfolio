@@ -5,10 +5,10 @@ interface WindowDimensions {
   innerHeight: number;
 }
 export default function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
-    innerWidth: window.innerWidth,
-    innerHeight: window.innerHeight,
-  });
+  const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>(() => ({
+    innerWidth: typeof window !== "undefined" ? window.innerWidth : 0,
+    innerHeight: typeof window !== "undefined" ? window.innerHeight : 0,
+  }));
 
   useEffect(() => {
     const updateWindowDimensions = () => {

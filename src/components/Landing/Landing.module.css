@@ -1,16 +1,28 @@
 .letter {
+  position: relative;
+  display: inline-block;
   user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
 }
+
 .letter::after {
   position: relative;
   display: inline-block;
-  color: white;
+  color: #ffffff;
   bottom: 0;
-  font-size: 24px;
-  text-shadow: 5px 5px 5px black;
-
+  font-size: clamp(0.8rem, 1.6vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
   overflow: hidden;
+  width: 0;
+  text-shadow:
+    0 0 18px var(--accent, #2ee5e3),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .letterA::after {
   content: "mbitious";
 }
@@ -24,26 +36,24 @@
 .letterR:hover::after {
   width: 4em;
 }
+
 .letterT::after {
   content: "enacious";
 }
 .letterT:hover::after {
   width: 4.5em;
 }
+
 .letterU::after {
   content: "nique";
 }
 .letterU:hover::after {
   width: 3em;
 }
+
 .letterR2::after {
   content: "esourceful";
 }
 .letterR2:hover::after {
   width: 5.5em;
-}
-
-.letter::after {
-  transition: all 0.5s;
-  width: 0px;
 }
