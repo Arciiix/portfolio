@@ -20,7 +20,7 @@ import AnimatedTyping from "../Animations/AnimatedTyping/AnimatedTyping";
 import FancyBackground from "../Animations/FancyBackground/FancyBackground";
 import Socials from "../Socials/Socials";
 import { adjustColor } from "@/utils/color";
-import { TubesBackground } from "../ui/neon-flow";
+import { TubesBackground } from "../Decoration/NeonFlow";
 import styles from "./Landing.module.css";
 
 const ROLES = [
