@@ -170,7 +170,7 @@ export default function AnimatedCode({ accentColor }: AnimatedCodeProps) {
   const cursorColumn = Math.min(charIndex + 1, activeLineLength + 1);
 
   return (
-    <div className="glass-panel relative overflow-hidden rounded-[1.75rem]">
+    <div className="glass-panel relative min-w-0 w-full overflow-hidden rounded-[1.75rem]">
       {/* Scanline overlay for the CRT feel */}
       <div
         aria-hidden

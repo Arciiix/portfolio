@@ -118,25 +118,29 @@ export default function Landing() {
         onClick={stopPropagation}
         className="pointer-events-auto relative z-10 flex min-h-screen items-center px-6 py-24 md:px-16 lg:px-24"
       >
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-6">
+        <div className="mx-auto grid min-w-0 w-full max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-6">
           {/* Left column */}
-          <div className="flex flex-col items-center gap-7 text-center lg:items-start lg:text-left">
+          <div className="flex min-w-0 flex-col items-center gap-7 text-center lg:items-start lg:text-left">
             {/* Name with letter reveals */}
             <motion.div
               initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -40 }}
               animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.1 }}
-              className="select-none"
+              className="max-w-full select-none"
             >
               <div className="mb-4 text-base font-light uppercase tracking-[0.45em] text-white/50 md:text-lg">
                 I&apos;m
               </div>
-              <h1 className="text-[clamp(4rem,14vw,11rem)] font-extrabold leading-none">
+              <h1
+                className="max-w-full text-[clamp(4rem,14vw,11rem)] font-extrabold leading-none"
+                style={{
+                  filter: `drop-shadow(0 0 30px ${currentColor}59)`,
+                }}
+              >
                 <span
-                  className="relative inline-block whitespace-nowrap bg-clip-text text-transparent transition-all duration-700"
+                  className="relative inline-block whitespace-nowrap transition-all duration-700"
                   style={{
-                    backgroundImage: `linear-gradient(120deg, #ffffff 0%, ${currentColorLight} 55%, ${currentColor} 100%)`,
-                    filter: `drop-shadow(0 0 30px ${currentColor}59)`,
+                    ["--name-gradient" as string]: `linear-gradient(120deg, #ffffff 0%, ${currentColorLight} 55%, ${currentColor} 100%)`,
                     ["--accent" as string]: currentColor,
                   }}
                 >
@@ -164,7 +168,7 @@ export default function Landing() {
               initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
               animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
-              className="text-3xl font-bold lg:text-5xl"
+              className="min-w-0 max-w-full text-3xl font-bold lg:text-5xl"
             >
               <AnimatedTyping words={ROLES} cursorColor={currentColor} />
             </motion.div>
@@ -227,7 +231,7 @@ export default function Landing() {
               prefersReducedMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }
             }
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="relative mx-auto w-full max-w-sm lg:max-w-lg"
+            className="relative mx-auto min-w-0 w-full max-w-full lg:max-w-lg"
           >
             <motion.div
               animate={

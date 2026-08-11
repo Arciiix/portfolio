@@ -1,6 +1,10 @@
 .letter {
   position: relative;
   display: inline-block;
+  background-image: var(--name-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   user-select: none;
   cursor: pointer;
   white-space: nowrap;
