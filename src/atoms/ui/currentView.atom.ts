@@ -10,7 +10,7 @@ export type CurrentView =
 
 const currentViewAtom = atom<CurrentView>({
   key: "currentView",
-  default: "other",
+  default: "intro",
 });
 
 export default currentViewAtom;

@@ -1,22 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import AnimatedHeader from "@/components/Animations/AnimatedHeader/AnimatedHeader";
 
 export default function ProjectsHeader() {
   return (
     <motion.div
-      className="flex flex-col gap-3 my-5 items-center"
+      className="my-5 flex flex-col gap-5 items-start"
       initial={{ translateY: -200, opacity: 0 }}
       whileInView={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <AnimatedHeader title="Projects" />
-      <span className="font-semibold text-2xl px-3 text-center text-white text-opacity-80">
-        A selection of my favorite work. Dig into my universe. 🌠
-      </span>
-      <span className="font-semibold text-lg px-3 text-center text-white text-opacity-80">
-        Starting from my favorite ones
+      <span className="eyebrow">Selected work</span>
+      <h2 className="section-heading max-w-3xl">
+        Things I&apos;ve built, shipped, and learned from.
+      </h2>
+      <span className="max-w-xl text-base leading-relaxed text-white/45">
+        A selection of experiments and products across full-stack development,
+        IoT, automation, and computer vision.
       </span>
     </motion.div>
   );

@@ -1,13 +1,12 @@
 import Logo from "../Logo/Logo";
-import currentViewAtom from "@/atoms/ui/currentView.atom";
-import { useRecoilValue } from "recoil";
 
 import Hamburger from "../Hamburger/Hamburger";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useWindowDimensions from "@/hooks/ui/useWindowDimensions";
 import { BREAKPOINTS_LG } from "@/utils/size";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const NAVIGATION_ITEMS: Record<
   string,
@@ -32,30 +31,46 @@ export const NAVIGATION_ITEMS: Record<
 };
 
 export default function Header() {
-  const currentView = useRecoilValue(currentViewAtom);
-
+  const pathname = usePathname();
+  const [hasScrolledPastHero, setHasScrolledPastHero] = useState(
+    pathname !== "/"
+  );
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const { innerWidth } = useWindowDimensions();
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setHasScrolledPastHero(true);
+      return;
+    }
+
+    const onScroll = () => {
+      setHasScrolledPastHero(window.scrollY > window.innerHeight * 0.9);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
 
   const onNavigationToggle = () => setIsNavigationOpen((prev) => !prev);
 
   const navigationItems = useMemo(() => {
     return Object.entries(NAVIGATION_ITEMS).map(([key, value]) => (
-      <div key={key} className="group flex flex-col mx-2 cursor-pointer">
+      <div key={key} className="group flex flex-col cursor-pointer">
         <a
           data-to-scrollspy-id={key}
           href={`/#${key}`}
-          className={`transition-all text-xl group-hover:text-teal-400 group-hover:font-bold text-opacity-70 ${
-            value.special
-              ? "font-bold bg-gradient-to-r  from-green-200 to-blue-300 bg-clip-text text-transparent"
-              : "text-white"
+          onClick={() => setIsNavigationOpen(false)}
+          className={`transition-all text-[13px] tracking-wide group-hover:text-[#83e7d8] text-opacity-70 ${
+            value.special ? "font-bold text-[#83e7d8]" : "text-white"
           }
           `}
         >
           {value.displayName}
         </a>
         <span
-          className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-teal-400`}
+          className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-px bg-[#83e7d8]`}
         ></span>
       </div>
     ));
@@ -63,25 +78,41 @@ export default function Header() {
 
   return (
     <div
-      className={`w-full p-2 m-0 fixed ${
-        currentView !== "intro" ? "bg-teal-900" : ""
-      } rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40 transition-all duration-500 flex justify-between z-40 items-center`}
+      className={`fixed z-40 flex items-center justify-between transition-all duration-500 ${
+        hasScrolledPastHero
+          ? "top-4 left-1/2 w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 rounded-2xl px-4 py-3 glass-panel"
+          : "top-0 left-0 w-full rounded-none border border-transparent bg-transparent px-16 py-4 shadow-none backdrop-blur-0"
+      }`}
     >
       <Link href="/">
-        <Logo size={70} />
+        <div className="flex items-center gap-3">
+          <Logo size={42} />
+          <AnimatePresence initial={false}>
+            {hasScrolledPastHero ? (
+              <motion.span
+                className="hidden sm:block text-sm font-semibold tracking-tight"
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -8 }}
+                transition={{ duration: 0.25 }}
+              >
+                Artur Nowak{" "}
+                <span className="text-white/35 font-normal">/ engineer</span>
+              </motion.span>
+            ) : null}
+          </AnimatePresence>
+        </div>
       </Link>
 
       <div className="flex lg:hidden">
         <Hamburger isOpen={isNavigationOpen} onToggle={onNavigationToggle} />
       </div>
-      <div className="hidden lg:flex">{navigationItems}</div>
+      <div className="hidden lg:flex items-center gap-7">{navigationItems}</div>
 
       <AnimatePresence>
         {isNavigationOpen && innerWidth < BREAKPOINTS_LG ? (
           <motion.div
-            className={
-              "fixed top-0 left-0 bg-slate-900 w-full p-4 pt-28 -z-10 flex flex-col gap-3"
-            }
+            className="fixed top-0 left-0 glass-panel w-full p-6 pt-24 -z-10 flex flex-col gap-5 rounded-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
