@@ -1,18 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState, type MouseEvent } from "react";
-import {
-  ArrowRight,
-  Atom,
-  Cpu,
-  FileCode2,
-  Sparkles,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
+import AnimatedCode from "../Animations/AnimatedCode/AnimatedCode";
 import AnimatedTexts, {
   AnimatedText,
 } from "../Animations/AnimatedTexts/AnimatedTexts";
@@ -68,43 +60,6 @@ const FELL_IN_LOVE_TEXTS: AnimatedText[] = [
     color: "#E7FEFD",
   },
 ];
-
-const TECH_CHIPS: Array<{
-  Icon: LucideIcon;
-  label: string;
-  className: string;
-  delay: number;
-}> = [
-  {
-    Icon: Atom,
-    label: "React",
-    className: "-left-12 top-10",
-    delay: 0,
-  },
-  {
-    Icon: FileCode2,
-    label: "TypeScript",
-    className: "-top-6 right-4",
-    delay: 0.6,
-  },
-  {
-    Icon: Cpu,
-    label: "IoT",
-    className: "-left-16 bottom-24",
-    delay: 1.2,
-  },
-  {
-    Icon: Zap,
-    label: "Full-stack",
-    className: "-right-10 bottom-4",
-    delay: 1.8,
-  },
-];
-
-const AnimatedDeveloper = dynamic(
-  () => import("../Animations/AnimatedDeveloper/AnimatedDeveloper"),
-  { ssr: false }
-);
 
 export default function Landing() {
   const [currentFellInLoveIndex, setCurrentFellInLoveIndex] = useState(0);
@@ -263,7 +218,7 @@ export default function Landing() {
             </motion.div>
           </div>
 
-          {/* Right column - developer card */}
+          {/* Right column - developer code window */}
           <motion.div
             initial={
               prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.92 }
@@ -272,52 +227,28 @@ export default function Landing() {
               prefersReducedMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }
             }
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="relative mx-auto w-full max-w-sm lg:max-w-md"
+            className="relative mx-auto w-full max-w-sm lg:max-w-lg"
           >
-            {/* Ambient glow behind the card */}
-            <div
-              aria-hidden
-              className="absolute -inset-6 rounded-[3rem] opacity-30 blur-3xl transition-all duration-700"
-              style={{ background: currentColor }}
-            />
+            <motion.div
+              animate={
+                prefersReducedMotion ? undefined : { y: [0, -12, 0] }
+              }
+              transition={{
+                repeat: Infinity,
+                duration: 6,
+                ease: "easeInOut",
+              }}
+              className="relative"
+            >
+              {/* Ambient glow behind the window */}
+              <div
+                aria-hidden
+                className="absolute -inset-6 rounded-[3rem] opacity-30 blur-3xl transition-all duration-700"
+                style={{ background: currentColor }}
+              />
 
-            <div className="glass-panel relative overflow-hidden rounded-[1.75rem]">
-              {/* Window chrome */}
-              <div className="flex items-center gap-2 border-b border-white/10 px-5 py-3.5">
-                <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-                <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-                <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-                <span className="ml-4 truncate font-mono text-xs tracking-wide text-white/45">
-                  artur.ts
-                </span>
-                <Sparkles className="ml-auto h-3.5 w-3.5 text-white/30" />
-              </div>
-              <div className="p-4 md:p-6">
-                <AnimatedDeveloper />
-              </div>
-            </div>
-
-            {/* Floating tech chips */}
-            {TECH_CHIPS.map(({ Icon, label, className, delay }) => (
-              <motion.div
-                key={label}
-                className={`absolute z-10 hidden items-center gap-2.5 rounded-2xl glass-panel px-4 py-2.5 lg:flex ${className}`}
-                animate={
-                  prefersReducedMotion ? undefined : { y: [0, -10, 0] }
-                }
-                transition={{
-                  repeat: Infinity,
-                  duration: 5,
-                  ease: "easeInOut",
-                  delay,
-                }}
-              >
-                <Icon className="h-4 w-4" style={{ color: currentColor }} />
-                <span className="text-xs font-semibold uppercase tracking-widest text-white/85">
-                  {label}
-                </span>
-              </motion.div>
-            ))}
+              <AnimatedCode accentColor={currentColor} />
+            </motion.div>
           </motion.div>
         </div>
       </div>
