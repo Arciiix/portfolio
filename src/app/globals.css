@@ -49,3 +49,75 @@ body {
 .link:hover::before {
   transform: scaleX(1);
 }
+
+/* ===== react-terminal (v1.4.5) overrides ===== */
+[data-testid="terminal"] {
+  background: transparent !important;
+}
+
+[data-testid="terminal"] .index_terminal__teubZ {
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+[data-testid="terminal"] .index_editor__JoDSg {
+  height: 100%;
+  background: transparent !important;
+  border-radius: 0 !important;
+  font-family:
+    ui-monospace,
+    "Cascadia Code",
+    "Source Code Pro",
+    Menlo,
+    monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  padding: 1.1rem 1.35rem;
+  color: #c9d1d9;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+[data-testid="terminal"] .index_editor__JoDSg::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-testid="terminal"] .index_editor__JoDSg::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-testid="terminal"] .index_editor__JoDSg::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: 9999px;
+}
+
+[data-testid="terminal"] .index_editor__JoDSg::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+[data-testid="terminal"]
+  .index_editor__JoDSg
+  .index_caretAfter__6aXPx {
+  width: 8px !important;
+  height: 1.1em !important;
+  top: 1px !important;
+  background: #2dd4bf !important;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.9);
+}
+
+[data-testid="terminal"] .index_editor__JoDSg a {
+  color: #2dd4bf;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(45, 212, 191, 0.5);
+  transition: border-color 0.2s;
+}
+
+[data-testid="terminal"] .index_editor__JoDSg a:hover {
+  border-bottom-color: #2dd4bf;
+}

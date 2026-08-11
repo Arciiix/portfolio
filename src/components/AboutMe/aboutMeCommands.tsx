@@ -21,30 +21,38 @@ const availableCommands: Map<keyof typeof aboutMeCommands | string, string> =
   ]);
 
 const availableCommandsOutput = (
-  <>
-    <b>Available commands: </b>
-    <ul>
+  <div className="mt-3">
+    <div className="text-white/50">
+      Type one of the commands below (try <b className="text-teal-300">Tab</b>{" "}
+      for autocomplete):
+    </div>
+    <div className="mt-2 grid grid-cols-1 gap-x-8 gap-y-1.5 sm:grid-cols-2">
       {Array.from(availableCommands).map(([command, description]) => (
-        <li key={command}>
-          <span className="text-teal-400">{command}</span> - {description}
-        </li>
+        <div key={command} className="flex items-baseline gap-2">
+          <span className="shrink-0 font-bold text-teal-400">{command}</span>
+          <span className="text-white/60">{description}</span>
+        </div>
       ))}
-    </ul>
-  </>
+    </div>
+  </div>
 );
 
 export const welcomeMessage = (
-  <div>
-    <h1 className="text-2xl bg-gradient-to-r from-teal-300 to-teal-600 bg-clip-text text-transparent font-bold">
-      Hey!
-    </h1>
+  <div className="space-y-2">
+    <div className="bg-gradient-to-r from-teal-300 to-teal-500 bg-clip-text text-2xl font-bold text-transparent">
+      Hey there! Welcome to my terminal 🖥️
+    </div>
     <p>
-      My name is <b className="text-teal-400 font-bold">Artur</b> and I&apos;m a
+      My name is <b className="font-bold text-teal-400">Artur</b> and I&apos;m a
       passionate software engineer ✨
     </p>
-    <p>I love Back-End and IoT!</p>
     <p>
-      This is a little terminal that you can use to get to know more about me :)
+      I love <b className="text-teal-400">Back-End</b> and{" "}
+      <b className="text-teal-400">IoT</b>!
+    </p>
+    <p className="text-white/60">
+      Use this little terminal to get to know more about me - type{" "}
+      <b className="text-teal-300">help</b> to see what I can tell you :)
     </p>
     {availableCommandsOutput}
   </div>
